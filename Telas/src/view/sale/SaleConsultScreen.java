@@ -27,15 +27,128 @@ public class SaleConsultScreen extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        labelFilter = new javax.swing.JLabel();
+        textFilter = new javax.swing.JTextField();
+        btnSearch = new javax.swing.JButton();
+        btnCleanTable = new javax.swing.JButton();
+        btnCancel = new javax.swing.JButton();
+        btnRemove = new javax.swing.JButton();
+        comboSearch = new javax.swing.JComboBox<>();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        salesTable = new javax.swing.JTable();
+
+        setClosable(true);
+        setTitle("Consulta de Venda");
+
+        labelFilter.setText("Filtro:");
+
+        btnSearch.setText("Consultar");
+
+        btnCleanTable.setText("Limpar");
+
+        btnCancel.setText("Cancelar");
+
+        btnRemove.setText("Deletar");
+
+        comboSearch.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ID", "Data", "Nota Fiscal", "Forma de Recebimento", "Quantidade de Parcelas", "Cliente", "Usuário", "Status" }));
+
+        salesTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Data", "Hora", "Nota Fiscal", "Valor Total", "Forma de Rec.", "Qnt. Parcelas", "Valor das Parc.", "Data de Venc.", "Cliente", "Usuário", "Status"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, true, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        salesTable.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
+        salesTable.setSurrendersFocusOnKeystroke(true);
+        salesTable.getTableHeader().setResizingAllowed(false);
+        salesTable.getTableHeader().setReorderingAllowed(false);
+        jScrollPane1.setViewportView(salesTable);
+        if (salesTable.getColumnModel().getColumnCount() > 0) {
+            salesTable.getColumnModel().getColumn(0).setResizable(false);
+            salesTable.getColumnModel().getColumn(0).setPreferredWidth(70);
+            salesTable.getColumnModel().getColumn(1).setResizable(false);
+            salesTable.getColumnModel().getColumn(1).setPreferredWidth(90);
+            salesTable.getColumnModel().getColumn(2).setResizable(false);
+            salesTable.getColumnModel().getColumn(2).setPreferredWidth(90);
+            salesTable.getColumnModel().getColumn(3).setResizable(false);
+            salesTable.getColumnModel().getColumn(3).setPreferredWidth(70);
+            salesTable.getColumnModel().getColumn(4).setResizable(false);
+            salesTable.getColumnModel().getColumn(4).setPreferredWidth(90);
+            salesTable.getColumnModel().getColumn(5).setResizable(false);
+            salesTable.getColumnModel().getColumn(5).setPreferredWidth(150);
+            salesTable.getColumnModel().getColumn(6).setResizable(false);
+            salesTable.getColumnModel().getColumn(6).setPreferredWidth(90);
+            salesTable.getColumnModel().getColumn(7).setResizable(false);
+            salesTable.getColumnModel().getColumn(7).setPreferredWidth(100);
+            salesTable.getColumnModel().getColumn(8).setResizable(false);
+            salesTable.getColumnModel().getColumn(8).setPreferredWidth(100);
+            salesTable.getColumnModel().getColumn(9).setResizable(false);
+            salesTable.getColumnModel().getColumn(9).setPreferredWidth(250);
+            salesTable.getColumnModel().getColumn(10).setResizable(false);
+            salesTable.getColumnModel().getColumn(10).setPreferredWidth(100);
+            salesTable.getColumnModel().getColumn(11).setResizable(false);
+            salesTable.getColumnModel().getColumn(11).setPreferredWidth(70);
+        }
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 394, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 584, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(btnRemove))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(233, 233, 233)
+                        .addComponent(btnCleanTable)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnCancel)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addComponent(labelFilter)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(comboSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(textFilter, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnSearch)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 274, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelFilter)
+                    .addComponent(textFilter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(comboSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSearch))
+                .addGap(35, 35, 35)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnRemove)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCleanTable)
+                    .addComponent(btnCancel))
+                .addGap(41, 41, 41))
         );
 
         pack();
@@ -43,5 +156,14 @@ public class SaleConsultScreen extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCancel;
+    private javax.swing.JButton btnCleanTable;
+    private javax.swing.JButton btnRemove;
+    private javax.swing.JButton btnSearch;
+    private javax.swing.JComboBox<String> comboSearch;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel labelFilter;
+    private javax.swing.JTable salesTable;
+    private javax.swing.JTextField textFilter;
     // End of variables declaration//GEN-END:variables
 }

@@ -44,16 +44,7 @@ public class BrandConsultScreen extends javax.swing.JInternalFrame {
 
         brandsTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+
             },
             new String [] {
                 "ID", "Nome", "Status"
@@ -73,7 +64,9 @@ public class BrandConsultScreen extends javax.swing.JInternalFrame {
         brandsTable.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(brandsTable);
         if (brandsTable.getColumnModel().getColumnCount() > 0) {
+            brandsTable.getColumnModel().getColumn(0).setResizable(false);
             brandsTable.getColumnModel().getColumn(0).setPreferredWidth(90);
+            brandsTable.getColumnModel().getColumn(1).setResizable(false);
             brandsTable.getColumnModel().getColumn(1).setPreferredWidth(200);
             brandsTable.getColumnModel().getColumn(2).setPreferredWidth(90);
         }

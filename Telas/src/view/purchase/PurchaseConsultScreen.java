@@ -3,18 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package view.product;
+package view.purchase;
+
+import view.sale.*;
 
 /**
  *
  * @author weth767
  */
-public class ProductConsultScreen extends javax.swing.JInternalFrame {
+public class PurchaseConsultScreen extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form ProductConsultScreen
+     * Creates new form SaleConsultScreen
      */
-    public ProductConsultScreen() {
+    public PurchaseConsultScreen() {
         initComponents();
     }
 
@@ -27,59 +29,18 @@ public class ProductConsultScreen extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        productsTable = new javax.swing.JTable();
         labelFilter = new javax.swing.JLabel();
         textFilter = new javax.swing.JTextField();
         btnSearch = new javax.swing.JButton();
         btnCleanTable = new javax.swing.JButton();
         btnCancel = new javax.swing.JButton();
-        btnUpdate = new javax.swing.JButton();
         btnRemove = new javax.swing.JButton();
         comboSearch = new javax.swing.JComboBox<>();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        salesTable = new javax.swing.JTable();
 
         setClosable(true);
-        setTitle("Consulta de Produtos");
-
-        productsTable.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "ID", "Nome", "Quantidade", "Marca", "Lote", "Categoria", "Validade", "Status"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        productsTable.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
-        productsTable.setSurrendersFocusOnKeystroke(true);
-        productsTable.getTableHeader().setResizingAllowed(false);
-        productsTable.getTableHeader().setReorderingAllowed(false);
-        jScrollPane1.setViewportView(productsTable);
-        if (productsTable.getColumnModel().getColumnCount() > 0) {
-            productsTable.getColumnModel().getColumn(0).setResizable(false);
-            productsTable.getColumnModel().getColumn(0).setPreferredWidth(70);
-            productsTable.getColumnModel().getColumn(1).setResizable(false);
-            productsTable.getColumnModel().getColumn(1).setPreferredWidth(200);
-            productsTable.getColumnModel().getColumn(2).setResizable(false);
-            productsTable.getColumnModel().getColumn(2).setPreferredWidth(100);
-            productsTable.getColumnModel().getColumn(3).setResizable(false);
-            productsTable.getColumnModel().getColumn(3).setPreferredWidth(200);
-            productsTable.getColumnModel().getColumn(4).setResizable(false);
-            productsTable.getColumnModel().getColumn(4).setPreferredWidth(150);
-            productsTable.getColumnModel().getColumn(5).setResizable(false);
-            productsTable.getColumnModel().getColumn(5).setPreferredWidth(150);
-            productsTable.getColumnModel().getColumn(6).setResizable(false);
-            productsTable.getColumnModel().getColumn(6).setPreferredWidth(120);
-            productsTable.getColumnModel().getColumn(7).setResizable(false);
-            productsTable.getColumnModel().getColumn(7).setPreferredWidth(70);
-        }
+        setTitle("Consulta de Venda");
 
         labelFilter.setText("Filtro:");
 
@@ -89,16 +50,57 @@ public class ProductConsultScreen extends javax.swing.JInternalFrame {
 
         btnCancel.setText("Cancelar");
 
-        btnUpdate.setText("Alterar");
-        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUpdateActionPerformed(evt);
-            }
-        });
-
         btnRemove.setText("Deletar");
 
-        comboSearch.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ID", "Nome", "Marca", "Categoria", "Quantidade", "Lote", "Validade", "Valor de Venda", "Valor de Compra", "Status" }));
+        comboSearch.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ID", "Data", "Nota Fiscal", "Forma de Recebimento", "Quantidade de Parcelas", "Cliente", "Usuário", "Status" }));
+
+        salesTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Data", "Hora", "Nota Fiscal", "Valor Total", "Forma de Pgt.", "Qnt. Parcelas", "Valor das Parc.", "Data de Venc.", "Fornecedor", "Usuário", "Status"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        salesTable.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
+        salesTable.setSurrendersFocusOnKeystroke(true);
+        salesTable.getTableHeader().setResizingAllowed(false);
+        salesTable.getTableHeader().setReorderingAllowed(false);
+        jScrollPane1.setViewportView(salesTable);
+        if (salesTable.getColumnModel().getColumnCount() > 0) {
+            salesTable.getColumnModel().getColumn(0).setResizable(false);
+            salesTable.getColumnModel().getColumn(0).setPreferredWidth(70);
+            salesTable.getColumnModel().getColumn(1).setResizable(false);
+            salesTable.getColumnModel().getColumn(1).setPreferredWidth(90);
+            salesTable.getColumnModel().getColumn(2).setResizable(false);
+            salesTable.getColumnModel().getColumn(2).setPreferredWidth(90);
+            salesTable.getColumnModel().getColumn(3).setResizable(false);
+            salesTable.getColumnModel().getColumn(3).setPreferredWidth(70);
+            salesTable.getColumnModel().getColumn(4).setResizable(false);
+            salesTable.getColumnModel().getColumn(4).setPreferredWidth(90);
+            salesTable.getColumnModel().getColumn(5).setResizable(false);
+            salesTable.getColumnModel().getColumn(5).setPreferredWidth(150);
+            salesTable.getColumnModel().getColumn(6).setResizable(false);
+            salesTable.getColumnModel().getColumn(6).setPreferredWidth(90);
+            salesTable.getColumnModel().getColumn(7).setResizable(false);
+            salesTable.getColumnModel().getColumn(7).setPreferredWidth(100);
+            salesTable.getColumnModel().getColumn(8).setResizable(false);
+            salesTable.getColumnModel().getColumn(8).setPreferredWidth(100);
+            salesTable.getColumnModel().getColumn(9).setResizable(false);
+            salesTable.getColumnModel().getColumn(9).setPreferredWidth(250);
+            salesTable.getColumnModel().getColumn(10).setResizable(false);
+            salesTable.getColumnModel().getColumn(10).setPreferredWidth(100);
+            salesTable.getColumnModel().getColumn(11).setResizable(false);
+            salesTable.getColumnModel().getColumn(11).setPreferredWidth(70);
+        }
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -107,23 +109,21 @@ public class ProductConsultScreen extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(278, 278, 278)
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 584, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(btnRemove))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(233, 233, 233)
                         .addComponent(btnCleanTable)
                         .addGap(18, 18, 18)
                         .addComponent(btnCancel)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(btnUpdate)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnRemove)))))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
-                .addGap(87, 87, 87)
+                .addGap(49, 49, 49)
                 .addComponent(labelFilter)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(comboSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -131,7 +131,7 @@ public class ProductConsultScreen extends javax.swing.JInternalFrame {
                 .addComponent(textFilter, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnSearch)
-                .addContainerGap(89, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -145,10 +145,8 @@ public class ProductConsultScreen extends javax.swing.JInternalFrame {
                 .addGap(35, 35, 35)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnUpdate)
-                    .addComponent(btnRemove))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnRemove)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCleanTable)
                     .addComponent(btnCancel))
@@ -158,21 +156,16 @@ public class ProductConsultScreen extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
-
-    }//GEN-LAST:event_btnUpdateActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancel;
     private javax.swing.JButton btnCleanTable;
     private javax.swing.JButton btnRemove;
     private javax.swing.JButton btnSearch;
-    private javax.swing.JButton btnUpdate;
     private javax.swing.JComboBox<String> comboSearch;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel labelFilter;
-    private javax.swing.JTable productsTable;
+    private javax.swing.JTable salesTable;
     private javax.swing.JTextField textFilter;
     // End of variables declaration//GEN-END:variables
 }
