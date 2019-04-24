@@ -87,6 +87,7 @@ public class ClientUpdateScreen extends javax.swing.JInternalFrame {
 
         setClosable(true);
         setTitle("Atualização de Clientes");
+        setToolTipText("Tela de atualização de clientes");
         setPreferredSize(new java.awt.Dimension(653, 470));
         addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
             public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
@@ -106,18 +107,27 @@ public class ClientUpdateScreen extends javax.swing.JInternalFrame {
             }
         });
 
+        textReference.setToolTipText("Referência para a residência do cliente");
+
         btnUpdate.setText("Atualizar");
+        btnUpdate.setToolTipText("Atualizar cliente");
 
         labelComplement.setText("Complemento");
 
         jFormattedTextField1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("######"))));
         jFormattedTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jFormattedTextField1.setToolTipText("Número da residência do cliente");
+
+        textComplement.setToolTipText("Complemento");
 
         btnCancel.setText("Cancelar");
+        btnCancel.setToolTipText("Cancelar operação");
 
         labelEmail.setText("E-mail");
 
         labelCep.setText("CEP");
+
+        textEmail.setToolTipText("E-mail do cliente");
 
         labelBirthday.setText("Data Nascimeto");
 
@@ -126,6 +136,7 @@ public class ClientUpdateScreen extends javax.swing.JInternalFrame {
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
+        textCep.setToolTipText("CEP onde se localiza a residência do cliente");
 
         labelName.setText("Nome");
 
@@ -135,6 +146,9 @@ public class ClientUpdateScreen extends javax.swing.JInternalFrame {
             ex.printStackTrace();
         }
         textBirthday.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        textBirthday.setToolTipText("Data de nascimento do cliente");
+
+        textName.setToolTipText("Nome do cliente");
 
         labelPhone.setText("Telefone");
 
@@ -145,9 +159,10 @@ public class ClientUpdateScreen extends javax.swing.JInternalFrame {
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
+        textPhone.setToolTipText("Telefone do cliente(se houver)");
 
         comboGender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Feminino", "Outros" }));
-        comboGender.setToolTipText("");
+        comboGender.setToolTipText("Sexo do cliente");
 
         labelCity.setText("Cidade");
 
@@ -160,6 +175,9 @@ public class ClientUpdateScreen extends javax.swing.JInternalFrame {
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
+        textCpf.setToolTipText("CPF do cliente");
+
+        comboCity.setToolTipText("Cidade onde se localiza a residência do cliente");
 
         labelRg.setText("RG");
 
@@ -168,8 +186,10 @@ public class ClientUpdateScreen extends javax.swing.JInternalFrame {
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
+        textCelphone.setToolTipText("Celular do cliente");
 
         textRg.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        textRg.setToolTipText("RG do cliente");
 
         labelState.setText("Estado");
 
@@ -179,6 +199,9 @@ public class ClientUpdateScreen extends javax.swing.JInternalFrame {
 
         comboState.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Distrito Federal", "Espírito Santo", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí", "Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", "Rondônia", "Roraima", "Santa Catarina", "São Paulo", "Sergipe", "Tocantins" }));
         comboState.setSelectedIndex(12);
+        comboState.setToolTipText("Estado onde se localiza a residência do cliente");
+
+        textWork.setToolTipText("Local de trabalho do cliente(se houver)");
 
         labelStreet.setText("Rua");
 
@@ -190,6 +213,7 @@ public class ClientUpdateScreen extends javax.swing.JInternalFrame {
             ex.printStackTrace();
         }
         textSalary.setText("");
+        textSalary.setToolTipText("Salário do cliente(se houver)");
 
         labelReference.setText("Referência");
 
@@ -198,6 +222,7 @@ public class ClientUpdateScreen extends javax.swing.JInternalFrame {
         labelStatus2.setText("Status");
 
         checkBoxStatus2.setText("Disponível?");
+        checkBoxStatus2.setToolTipText("Disponibilidade do cliente no sistema");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

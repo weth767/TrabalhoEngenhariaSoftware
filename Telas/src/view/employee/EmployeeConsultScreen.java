@@ -45,7 +45,8 @@ public class EmployeeConsultScreen extends javax.swing.JInternalFrame {
         comboSearch = new javax.swing.JComboBox<>();
 
         setClosable(true);
-        setTitle("Consulta de Clientes");
+        setTitle("Consulta de Funcionários");
+        setToolTipText("");
         setMaximumSize(null);
         setRequestFocusEnabled(false);
 

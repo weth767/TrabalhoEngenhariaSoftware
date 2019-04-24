@@ -43,15 +43,22 @@ public class CategoryConsultScreen extends javax.swing.JInternalFrame {
 
         labelFilter.setText("Filtro:");
 
+        textFilter.setToolTipText("Informação de filtragem da categoria");
+
         comboSearch.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ID", "Nome", "Status" }));
+        comboSearch.setToolTipText("Filtro de consultas de categoria");
 
         btnSearch.setText("Consultar");
+        btnSearch.setToolTipText("Consulta de categorias");
 
         btnRemove.setText("Deletar");
+        btnRemove.setToolTipText("Apagar uma categoria");
 
         btnCleanTable.setText("Limpar");
+        btnCleanTable.setToolTipText("Limpar as linhas da tabela(não apaga os dados)");
 
         btnUpdate.setText("Alterar");
+        btnUpdate.setToolTipText("Alterar uma categoria");
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateActionPerformed(evt);
@@ -59,6 +66,7 @@ public class CategoryConsultScreen extends javax.swing.JInternalFrame {
         });
 
         btnCancel.setText("Cancelar");
+        btnCancel.setToolTipText("Cancelar Operação");
 
         categoriesTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -76,6 +84,7 @@ public class CategoryConsultScreen extends javax.swing.JInternalFrame {
                 return canEdit [columnIndex];
             }
         });
+        categoriesTable.setToolTipText("Tabela de Categorias");
         categoriesTable.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
         categoriesTable.setSurrendersFocusOnKeystroke(true);
         categoriesTable.getTableHeader().setResizingAllowed(false);

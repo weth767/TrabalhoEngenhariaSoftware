@@ -48,28 +48,35 @@ public class CashierScreen extends javax.swing.JInternalFrame {
 
         textCashierNumber.setEditable(false);
         textCashierNumber.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        textCashierNumber.setToolTipText("Identificação do caixa");
 
         labelOpeningTime.setText("Hora de Abertura");
 
         labelOpeningValue.setText("Valor de Abertura");
 
         textOpeningValue.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        textOpeningValue.setToolTipText("Valor de abertura do caixa");
 
         textOpeningTime.setEditable(false);
         textOpeningTime.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        textOpeningTime.setToolTipText("Hora de abertura do caixa");
 
         labelDate.setText("Data");
 
         textDate.setEditable(false);
         textDate.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        textDate.setToolTipText("Data de abertura do caixa");
 
         labelStatus.setText("Status");
 
         checkBoxStatus.setText("Aberto?");
+        checkBoxStatus.setToolTipText("Status de funcionamento do caixa");
 
         btnOpen.setText("Abrir");
+        btnOpen.setToolTipText("Abrir Caixa");
 
         btnClose.setText("Fechar");
+        btnClose.setToolTipText("Fechar caixa");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

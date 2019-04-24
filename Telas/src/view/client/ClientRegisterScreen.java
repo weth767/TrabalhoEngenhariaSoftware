@@ -89,10 +89,12 @@ public class ClientRegisterScreen extends javax.swing.JInternalFrame {
 
         labelName.setText("Nome");
 
+        textName.setToolTipText("Nome do cliente");
+
         labelGender.setText("Sexo");
 
         comboGender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Feminino", "Outros" }));
-        comboGender.setToolTipText("");
+        comboGender.setToolTipText("Sexo do cliente");
 
         labelCpf.setText("CPF");
 
@@ -102,17 +104,22 @@ public class ClientRegisterScreen extends javax.swing.JInternalFrame {
             ex.printStackTrace();
         }
         textCpf.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        textCpf.setToolTipText("CPF do cliente");
 
         labelRg.setText("RG");
 
         textRg.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        textRg.setToolTipText("RG do cliente");
 
         labelCity.setText("Cidade");
+
+        comboCity.setToolTipText("Cidade onde se localiza a moradia do cliente");
 
         labelState.setText("Estado");
 
         comboState.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Distrito Federal", "Espírito Santo", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí", "Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", "Rondônia", "Roraima", "Santa Catarina", "São Paulo", "Sergipe", "Tocantins" }));
         comboState.setSelectedIndex(12);
+        comboState.setToolTipText("Estado onde se localiza a moradia do cliente");
 
         labelStreet.setText("Rua");
 
@@ -120,6 +127,7 @@ public class ClientRegisterScreen extends javax.swing.JInternalFrame {
 
         jFormattedTextField1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("######"))));
         jFormattedTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jFormattedTextField1.setToolTipText("Número da casa do cliente");
 
         labelCep.setText("CEP");
 
@@ -129,14 +137,23 @@ public class ClientRegisterScreen extends javax.swing.JInternalFrame {
             ex.printStackTrace();
         }
         textCep.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        textCep.setToolTipText("CEP onde se localiza a moradia do cliente");
 
         labelNeighborhood.setText("Bairro");
 
+        textNeighborhood.setToolTipText("Bairro onde se localiza a moradia do cliente");
+
         labelReference.setText("Referência");
+
+        textReference.setToolTipText("Referência da residência do cliente");
 
         labelComplement.setText("Complemento");
 
+        textComplement.setToolTipText("Complemento");
+
         labelEmail.setText("E-mail");
+
+        textEmail.setToolTipText("E-mail do cliente");
 
         labelBirthday.setText("Data Nascimeto");
 
@@ -146,6 +163,7 @@ public class ClientRegisterScreen extends javax.swing.JInternalFrame {
             ex.printStackTrace();
         }
         jFormattedTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jFormattedTextField2.setToolTipText("Data de nascimento do cliente");
 
         labelPhone.setText("Telefone");
 
@@ -155,6 +173,7 @@ public class ClientRegisterScreen extends javax.swing.JInternalFrame {
             ex.printStackTrace();
         }
         textPhone.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        textPhone.setToolTipText("Telefone do cliente(se houver)");
 
         labelCelphone.setText("Celular");
 
@@ -163,8 +182,11 @@ public class ClientRegisterScreen extends javax.swing.JInternalFrame {
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
+        textCelphone.setToolTipText("Celular do cliente");
 
         labelWork.setText("Trabalho");
+
+        textWork.setToolTipText("Local de trabalho do cliente(se houver)");
 
         labelSalary.setText("Salário");
 
@@ -174,12 +196,16 @@ public class ClientRegisterScreen extends javax.swing.JInternalFrame {
             ex.printStackTrace();
         }
         textSalary.setText("");
+        textSalary.setToolTipText("Salário do cliente(se houver)");
 
         btnRegister.setText("Cadastrar");
+        btnRegister.setToolTipText("Cadastrar Cliente");
 
         btnClean.setText("Limpar");
+        btnClean.setToolTipText("Limpar Campos");
 
         btnCancel.setText("Cancelar");
+        btnCancel.setToolTipText("Cancelar Operação");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

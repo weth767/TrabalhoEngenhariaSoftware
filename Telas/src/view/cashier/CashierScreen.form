@@ -110,6 +110,7 @@
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="toolTipText" type="java.lang.String" value="Identifica&#xe7;&#xe3;o do caixa"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="labelOpeningTime">
@@ -125,12 +126,14 @@
     <Component class="javax.swing.JTextField" name="textOpeningValue">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="toolTipText" type="java.lang.String" value="Valor de abertura do caixa"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="textOpeningTime">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="toolTipText" type="java.lang.String" value="Hora de abertura do caixa"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="labelDate">
@@ -142,6 +145,7 @@
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="toolTipText" type="java.lang.String" value="Data de abertura do caixa"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="labelStatus">
@@ -152,16 +156,19 @@
     <Component class="javax.swing.JCheckBox" name="checkBoxStatus">
       <Properties>
         <Property name="text" type="java.lang.String" value="Aberto?"/>
+        <Property name="toolTipText" type="java.lang.String" value="Status de funcionamento do caixa"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnOpen">
       <Properties>
         <Property name="text" type="java.lang.String" value="Abrir"/>
+        <Property name="toolTipText" type="java.lang.String" value="Abrir Caixa"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnClose">
       <Properties>
         <Property name="text" type="java.lang.String" value="Fechar"/>
+        <Property name="toolTipText" type="java.lang.String" value="Fechar caixa"/>
       </Properties>
     </Component>
   </SubComponents>

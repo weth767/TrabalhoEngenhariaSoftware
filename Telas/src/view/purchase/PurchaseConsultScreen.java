@@ -40,7 +40,7 @@ public class PurchaseConsultScreen extends javax.swing.JInternalFrame {
         salesTable = new javax.swing.JTable();
 
         setClosable(true);
-        setTitle("Consulta de Venda");
+        setTitle("Consulta de Compra");
 
         labelFilter.setText("Filtro:");
 

@@ -72,6 +72,7 @@ public class ClientConsultScreen extends javax.swing.JInternalFrame {
                 return canEdit [columnIndex];
             }
         });
+        clientsTable.setToolTipText("Tabela de clientes");
         clientsTable.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
         clientsTable.setSurrendersFocusOnKeystroke(true);
         clientsTable.getTableHeader().setResizingAllowed(false);
@@ -125,13 +126,19 @@ public class ClientConsultScreen extends javax.swing.JInternalFrame {
 
         labelFilter.setText("Filtro:");
 
+        textFilter.setToolTipText("Informação de filtragem de cliente");
+
         btnSearch.setText("Consultar");
+        btnSearch.setToolTipText("Consulta de clientes");
 
         btnCleanTable.setText("Limpar");
+        btnCleanTable.setToolTipText("Limpar as linhas da tabela(não apaga os dados)");
 
         btnCancel.setText("Cancelar");
+        btnCancel.setToolTipText("Cancelar Operação");
 
         btnUpdate.setText("Alterar");
+        btnUpdate.setToolTipText("Alterar um cliente");
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateActionPerformed(evt);
@@ -139,8 +146,10 @@ public class ClientConsultScreen extends javax.swing.JInternalFrame {
         });
 
         btnRemove.setText("Deletar");
+        btnRemove.setToolTipText("Apagar um cliente");
 
         comboSearch.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ID", "Nome", "CPF", "RG", "Data de Cadastro", "Sexo", "Data de Nascimento", "E-mail", "Telefone", "Celular", "CEP", "Estado", "Cidade", "Bairro", "Rua", "Local de Trabalho", "Salário", "Status" }));
+        comboSearch.setToolTipText("Filtro de busca de clientes");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

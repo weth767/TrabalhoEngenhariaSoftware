@@ -126,6 +126,7 @@
                 <Column editable="false" title="Status" type="java.lang.Object"/>
               </Table>
             </Property>
+            <Property name="toolTipText" type="java.lang.String" value="Tabela de clientes"/>
             <Property name="autoResizeMode" type="int" value="0"/>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
               <TableColumnModel selectionModel="0">
@@ -253,25 +254,32 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="textFilter">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value="Informa&#xe7;&#xe3;o de filtragem de cliente"/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnSearch">
       <Properties>
         <Property name="text" type="java.lang.String" value="Consultar"/>
+        <Property name="toolTipText" type="java.lang.String" value="Consulta de clientes"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnCleanTable">
       <Properties>
         <Property name="text" type="java.lang.String" value="Limpar"/>
+        <Property name="toolTipText" type="java.lang.String" value="Limpar as linhas da tabela(n&#xe3;o apaga os dados)"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnCancel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Cancelar"/>
+        <Property name="toolTipText" type="java.lang.String" value="Cancelar Opera&#xe7;&#xe3;o"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnUpdate">
       <Properties>
         <Property name="text" type="java.lang.String" value="Alterar"/>
+        <Property name="toolTipText" type="java.lang.String" value="Alterar um cliente"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUpdateActionPerformed"/>
@@ -280,6 +288,7 @@
     <Component class="javax.swing.JButton" name="btnRemove">
       <Properties>
         <Property name="text" type="java.lang.String" value="Deletar"/>
+        <Property name="toolTipText" type="java.lang.String" value="Apagar um cliente"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JComboBox" name="comboSearch">
@@ -306,6 +315,7 @@
             <StringItem index="17" value="Status"/>
           </StringArray>
         </Property>
+        <Property name="toolTipText" type="java.lang.String" value="Filtro de busca de clientes"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>

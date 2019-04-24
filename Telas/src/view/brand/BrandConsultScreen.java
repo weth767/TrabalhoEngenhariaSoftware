@@ -28,7 +28,7 @@ public class BrandConsultScreen extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        brandsTable = new javax.swing.JTable();
+        brandTable = new javax.swing.JTable();
         labelFilter = new javax.swing.JLabel();
         textFilter = new javax.swing.JTextField();
         comboSearch = new javax.swing.JComboBox<>();
@@ -42,7 +42,7 @@ public class BrandConsultScreen extends javax.swing.JInternalFrame {
         setTitle("Consulta de Marcas");
         setToolTipText("Tela de Consulta de Marcas");
 
-        brandsTable.setModel(new javax.swing.table.DefaultTableModel(
+        brandTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -58,30 +58,38 @@ public class BrandConsultScreen extends javax.swing.JInternalFrame {
                 return canEdit [columnIndex];
             }
         });
-        brandsTable.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
-        brandsTable.setSurrendersFocusOnKeystroke(true);
-        brandsTable.getTableHeader().setResizingAllowed(false);
-        brandsTable.getTableHeader().setReorderingAllowed(false);
-        jScrollPane1.setViewportView(brandsTable);
-        if (brandsTable.getColumnModel().getColumnCount() > 0) {
-            brandsTable.getColumnModel().getColumn(0).setResizable(false);
-            brandsTable.getColumnModel().getColumn(0).setPreferredWidth(90);
-            brandsTable.getColumnModel().getColumn(1).setResizable(false);
-            brandsTable.getColumnModel().getColumn(1).setPreferredWidth(200);
-            brandsTable.getColumnModel().getColumn(2).setPreferredWidth(90);
+        brandTable.setToolTipText("Tabela de Consulta de Marcas");
+        brandTable.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
+        brandTable.setSurrendersFocusOnKeystroke(true);
+        brandTable.getTableHeader().setResizingAllowed(false);
+        brandTable.getTableHeader().setReorderingAllowed(false);
+        jScrollPane1.setViewportView(brandTable);
+        if (brandTable.getColumnModel().getColumnCount() > 0) {
+            brandTable.getColumnModel().getColumn(0).setResizable(false);
+            brandTable.getColumnModel().getColumn(0).setPreferredWidth(90);
+            brandTable.getColumnModel().getColumn(1).setResizable(false);
+            brandTable.getColumnModel().getColumn(1).setPreferredWidth(200);
+            brandTable.getColumnModel().getColumn(2).setPreferredWidth(90);
         }
 
         labelFilter.setText("Filtro:");
 
+        textFilter.setToolTipText("Informação a ser filtrada para a busca");
+
         comboSearch.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ID", "Nome", "Status" }));
+        comboSearch.setToolTipText("Filtro de busca de marcas");
 
         btnSearch.setText("Consultar");
+        btnSearch.setToolTipText("Consulta de marcas");
 
         btnRemove.setText("Deletar");
+        btnRemove.setToolTipText("Apagar uma marca");
 
         btnCleanTable.setText("Limpar");
+        btnCleanTable.setToolTipText("Limpar as linhas da tabela(não apaga os dados)");
 
         btnUpdate.setText("Alterar");
+        btnUpdate.setToolTipText("Alterar uma marca");
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateActionPerformed(evt);
@@ -89,6 +97,7 @@ public class BrandConsultScreen extends javax.swing.JInternalFrame {
         });
 
         btnCancel.setText("Cancelar");
+        btnCancel.setToolTipText("Cancelar Operação");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -155,7 +164,7 @@ public class BrandConsultScreen extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTable brandsTable;
+    private javax.swing.JTable brandTable;
     private javax.swing.JButton btnCancel;
     private javax.swing.JButton btnCleanTable;
     private javax.swing.JButton btnRemove;
