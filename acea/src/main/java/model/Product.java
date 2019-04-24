@@ -18,7 +18,7 @@ public class Product {
     private Brand brand;
     @ManyToOne
     private Category category;
-    @Column(length = 50, unique = true)
+    @Column(length = 50)
     private String allotment;
     @Column(length = 50)
     private String barCode;
