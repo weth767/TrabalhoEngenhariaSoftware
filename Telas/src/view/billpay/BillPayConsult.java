@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package view.billreceive;
+package view.billpay;
 
 /**
  *
  * @author weth767
  */
-public class BillReceiveConsult extends javax.swing.JInternalFrame {
+public class BillPayConsult extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form BillReceiveConsult
      */
-    public BillReceiveConsult() {
+    public BillPayConsult() {
         initComponents();
     }
 
@@ -27,25 +27,32 @@ public class BillReceiveConsult extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        labelFilter = new javax.swing.JLabel();
-        comboBillReceive = new javax.swing.JComboBox<>();
         textFilter = new javax.swing.JTextField();
         btnSearch = new javax.swing.JButton();
-        btnReceiveBill = new javax.swing.JButton();
+        btnPayBill = new javax.swing.JButton();
         btnCancel = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        billPaysTable = new javax.swing.JTable();
+        labelFilter = new javax.swing.JLabel();
+        comboBillReceive = new javax.swing.JComboBox<>();
 
-        setClosable(true);
-        setTitle("Consulta de Contas à Receber");
-        setToolTipText("Tela de Consulta de Contas à Receber");
+        setTitle("Consulta de Contas à Pagar");
+        setToolTipText("Tela de Consulta de Contas à Pagar");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        btnSearch.setText("Consultar");
+
+        btnPayBill.setText("Pagar Conta");
+        btnPayBill.setToolTipText("Retornar dados para a tela de Pagar Conta");
+
+        btnCancel.setText("Cancelar");
+        btnCancel.setToolTipText("Cancelar Operação");
+
+        billPaysTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "NF", "CPF Cliente", "Data de Vencimento", "Valor da Parcela", "Parcelas Restantes", "Status"
+                "NF", "CNPJ Fornecedor", "Data de Vencimento", "Valor da Parcela", "Parcelas Restantes", "Status"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -56,34 +63,26 @@ public class BillReceiveConsult extends javax.swing.JInternalFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
-        if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(0).setResizable(false);
-            jTable1.getColumnModel().getColumn(0).setPreferredWidth(90);
-            jTable1.getColumnModel().getColumn(1).setResizable(false);
-            jTable1.getColumnModel().getColumn(1).setPreferredWidth(150);
-            jTable1.getColumnModel().getColumn(2).setResizable(false);
-            jTable1.getColumnModel().getColumn(2).setPreferredWidth(200);
-            jTable1.getColumnModel().getColumn(3).setResizable(false);
-            jTable1.getColumnModel().getColumn(3).setPreferredWidth(150);
-            jTable1.getColumnModel().getColumn(4).setResizable(false);
-            jTable1.getColumnModel().getColumn(4).setPreferredWidth(170);
-            jTable1.getColumnModel().getColumn(5).setResizable(false);
-            jTable1.getColumnModel().getColumn(5).setPreferredWidth(70);
+        jScrollPane1.setViewportView(billPaysTable);
+        if (billPaysTable.getColumnModel().getColumnCount() > 0) {
+            billPaysTable.getColumnModel().getColumn(0).setResizable(false);
+            billPaysTable.getColumnModel().getColumn(0).setPreferredWidth(70);
+            billPaysTable.getColumnModel().getColumn(1).setResizable(false);
+            billPaysTable.getColumnModel().getColumn(1).setPreferredWidth(120);
+            billPaysTable.getColumnModel().getColumn(2).setResizable(false);
+            billPaysTable.getColumnModel().getColumn(2).setPreferredWidth(130);
+            billPaysTable.getColumnModel().getColumn(3).setResizable(false);
+            billPaysTable.getColumnModel().getColumn(3).setPreferredWidth(120);
+            billPaysTable.getColumnModel().getColumn(4).setResizable(false);
+            billPaysTable.getColumnModel().getColumn(4).setPreferredWidth(130);
+            billPaysTable.getColumnModel().getColumn(5).setResizable(false);
+            billPaysTable.getColumnModel().getColumn(5).setPreferredWidth(70);
         }
 
         labelFilter.setText("Filtro");
 
-        comboBillReceive.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NF", "CPF do Cliente" }));
+        comboBillReceive.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NF", "Data de Vencimento" }));
         comboBillReceive.setToolTipText("");
-
-        btnSearch.setText("Consultar");
-
-        btnReceiveBill.setText("Receber Conta");
-        btnReceiveBill.setToolTipText("Retornar dados para a tela de Receber Conta");
-
-        btnCancel.setText("Cancelar");
-        btnCancel.setToolTipText("Cancelar Operação");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -93,42 +92,42 @@ public class BillReceiveConsult extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 575, Short.MAX_VALUE))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 585, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(208, 208, 208)
-                                .addComponent(btnReceiveBill)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnCancel))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(105, 105, 105)
+                                .addGap(104, 104, 104)
                                 .addComponent(labelFilter)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(comboBillReceive, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(textFilter, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnSearch)))
+                                .addComponent(btnSearch))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(224, 224, 224)
+                                .addComponent(btnPayBill)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnCancel)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelFilter)
                     .addComponent(comboBillReceive, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textFilter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnSearch))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnReceiveBill)
+                    .addComponent(btnPayBill)
                     .addComponent(btnCancel))
-                .addGap(31, 31, 31))
+                .addGap(30, 30, 30))
         );
 
         pack();
@@ -136,12 +135,12 @@ public class BillReceiveConsult extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTable billPaysTable;
     private javax.swing.JButton btnCancel;
-    private javax.swing.JButton btnReceiveBill;
+    private javax.swing.JButton btnPayBill;
     private javax.swing.JButton btnSearch;
     private javax.swing.JComboBox<String> comboBillReceive;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JLabel labelFilter;
     private javax.swing.JTextField textFilter;
     // End of variables declaration//GEN-END:variables

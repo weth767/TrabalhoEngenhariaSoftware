@@ -38,6 +38,8 @@ public class UserUpdate extends javax.swing.JInternalFrame {
         labelStatus = new javax.swing.JLabel();
         checkBoxStatus = new javax.swing.JCheckBox();
 
+        setClosable(true);
+
         comboPermission.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Gerente", "Caixa" }));
         comboPermission.setToolTipText("Nível de acesso do usuário no sistema");
 

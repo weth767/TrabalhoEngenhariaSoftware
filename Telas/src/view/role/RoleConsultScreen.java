@@ -38,6 +38,7 @@ public class RoleConsultScreen extends javax.swing.JInternalFrame {
         btnClean = new javax.swing.JButton();
         btnCancel = new javax.swing.JButton();
 
+        setClosable(true);
         setTitle("Consulta de Funções");
         setToolTipText("Tela de Consulta de Funções");
 

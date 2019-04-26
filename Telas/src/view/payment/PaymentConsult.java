@@ -3,18 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package view.receipt;
+package view.payment;
+
+import view.receipt.*;
 
 /**
  *
  * @author weth767
  */
-public class ReceiptConsult extends javax.swing.JInternalFrame {
+public class PaymentConsult extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form ReceiptConsult
      */
-    public ReceiptConsult() {
+    public PaymentConsult() {
         initComponents();
     }
 
@@ -37,19 +39,19 @@ public class ReceiptConsult extends javax.swing.JInternalFrame {
         btnRemove = new javax.swing.JButton();
         btnCancel = new javax.swing.JButton();
 
-        setTitle("Consulta de Recebimentos");
-        setToolTipText("Telas de Consulta de Recebimentos");
+        setTitle("Consulta de Pagamentos");
+        setToolTipText("Telas de Consulta de Pagamentos");
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "ID", "Valor Recebido", "Data de Recebimento", "Desconto", "Acréscimos", "Status"
+                "ID", "Valor Pago", "Data de Pagamento", "Status"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
+                false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -65,11 +67,7 @@ public class ReceiptConsult extends javax.swing.JInternalFrame {
             jTable1.getColumnModel().getColumn(2).setResizable(false);
             jTable1.getColumnModel().getColumn(2).setPreferredWidth(170);
             jTable1.getColumnModel().getColumn(3).setResizable(false);
-            jTable1.getColumnModel().getColumn(3).setPreferredWidth(100);
-            jTable1.getColumnModel().getColumn(4).setResizable(false);
-            jTable1.getColumnModel().getColumn(4).setPreferredWidth(125);
-            jTable1.getColumnModel().getColumn(5).setResizable(false);
-            jTable1.getColumnModel().getColumn(5).setPreferredWidth(70);
+            jTable1.getColumnModel().getColumn(3).setPreferredWidth(70);
         }
 
         labelFilter.setText("Filtro:");

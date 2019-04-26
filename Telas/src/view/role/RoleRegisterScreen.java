@@ -35,6 +35,7 @@ public class RoleRegisterScreen extends javax.swing.JInternalFrame {
         btnRegister = new javax.swing.JButton();
         btnCancel = new javax.swing.JButton();
 
+        setClosable(true);
         setTitle("Cadastro de Funções");
         setToolTipText("Tela de Cadastro de Funções");
 
