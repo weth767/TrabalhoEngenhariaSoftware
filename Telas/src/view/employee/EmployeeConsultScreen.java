@@ -55,7 +55,7 @@ public class EmployeeConsultScreen extends javax.swing.JInternalFrame {
 
             },
             new String [] {
-                "ID", "Nome", "CPF", "RG", "Sexo", "E-mail", "Data de Cadastro", "Telefone", "Celular", "Data de Nascimento", "Sálario", "Local de Trabalho", "Estado", "Cidade", "CEP", "Bairro", "Rua", "Número", "Referência", "Complemento", "Status"
+                "ID", "Nome", "CPF", "RG", "Sexo", "E-mail", "Data de Cadastro", "Telefone", "Celular", "Data de Nascimento", "Função", "Sálario", "Estado", "Cidade", "CEP", "Bairro", "Rua", "Número", "Referência", "Complemento", "Status"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -93,9 +93,9 @@ public class EmployeeConsultScreen extends javax.swing.JInternalFrame {
             employeesTable.getColumnModel().getColumn(9).setResizable(false);
             employeesTable.getColumnModel().getColumn(9).setPreferredWidth(130);
             employeesTable.getColumnModel().getColumn(10).setResizable(false);
-            employeesTable.getColumnModel().getColumn(10).setPreferredWidth(100);
+            employeesTable.getColumnModel().getColumn(10).setPreferredWidth(200);
             employeesTable.getColumnModel().getColumn(11).setResizable(false);
-            employeesTable.getColumnModel().getColumn(11).setPreferredWidth(200);
+            employeesTable.getColumnModel().getColumn(11).setPreferredWidth(100);
             employeesTable.getColumnModel().getColumn(12).setResizable(false);
             employeesTable.getColumnModel().getColumn(12).setPreferredWidth(150);
             employeesTable.getColumnModel().getColumn(13).setResizable(false);
