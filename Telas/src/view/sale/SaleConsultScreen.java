@@ -56,7 +56,7 @@ public class SaleConsultScreen extends javax.swing.JInternalFrame {
         btnRemove.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/delete-24.png"))); // NOI18N
         btnRemove.setToolTipText("Apagar Venda");
 
-        comboSearch.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ID", "Data", "Nota Fiscal", "Forma de Recebimento", "Quantidade de Parcelas", "Cliente", "Usuário", "Status" }));
+        comboSearch.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sem Filtragem", "ID", "Datas", "Valores", "Notas Fiscais", "Status", " " }));
         comboSearch.setToolTipText("Filtros");
 
         salesTable.setModel(new javax.swing.table.DefaultTableModel(

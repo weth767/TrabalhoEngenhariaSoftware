@@ -67,9 +67,10 @@ public class PurchaseRegisterScreen extends javax.swing.JInternalFrame {
         textBarcode = new javax.swing.JTextField();
         btnCancel = new javax.swing.JButton();
         jSeparator4 = new javax.swing.JSeparator();
-        
+        btnAddProduct2 = new javax.swing.JButton();
         labelAllotment = new javax.swing.JLabel();
         textAllotment = new javax.swing.JTextField();
+        btnRemoveProduct2 = new javax.swing.JButton();
         textUser = new javax.swing.JTextField();
         labelProvider = new javax.swing.JLabel();
         labelClientName = new javax.swing.JLabel();
@@ -102,6 +103,10 @@ public class PurchaseRegisterScreen extends javax.swing.JInternalFrame {
 
         textProductName.setEditable(false);
         textProductName.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        btnSearchProduct.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/search-24.png"))); // NOI18N
+        btnSearchProduct.setToolTipText("Buscar Produto");
+        btnSearchProduct.setBorderPainted(false);
 
         purchaseTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -185,15 +190,26 @@ public class PurchaseRegisterScreen extends javax.swing.JInternalFrame {
 
         labelBarcode.setText("Cód.Barras");
 
-        btnConfirmPurchase.setText("Confirmar Compra");
+        btnConfirmPurchase.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/finances-24.png"))); // NOI18N
+        btnConfirmPurchase.setToolTipText("Confirmar Compra");
 
         textBarcode.setEditable(false);
 
-        btnCancel.setText("Cancelar");
+        btnCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/cancel-24.png"))); // NOI18N
+        btnCancel.setToolTipText("Cancelar Operação");
+
+        btnAddProduct2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/add-24.png"))); // NOI18N
+        btnAddProduct2.setToolTipText("Adicionar Produto");
+        btnAddProduct2.setBorderPainted(false);
 
         labelAllotment.setText("Lote");
 
         textAllotment.setEditable(false);
+
+        btnRemoveProduct2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/cancel-24.png"))); // NOI18N
+        btnRemoveProduct2.setToolTipText("Remover Produto");
+        btnRemoveProduct2.setBorderPainted(false);
+        btnRemoveProduct2.setPreferredSize(new java.awt.Dimension(20, 20));
 
         textUser.setEditable(false);
         textUser.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -206,6 +222,10 @@ public class PurchaseRegisterScreen extends javax.swing.JInternalFrame {
         textProviderName.setEditable(false);
         textProviderName.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
+        btnSearchProvider.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/search-24.png"))); // NOI18N
+        btnSearchProvider.setToolTipText("Buscar Fornecedor");
+        btnSearchProvider.setBorderPainted(false);
+
         labelUser.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         labelUser.setText("Usuário");
 
@@ -213,12 +233,6 @@ public class PurchaseRegisterScreen extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(260, 260, 260)
-                .addComponent(btnConfirmPurchase)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnCancel)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -311,11 +325,21 @@ public class PurchaseRegisterScreen extends javax.swing.JInternalFrame {
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(btnAddProduct2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnRemoveProduct2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(labelProduct)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnSearchProduct, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(294, 294, 294)))))
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(320, 320, 320)
+                .addComponent(btnConfirmPurchase)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnCancel)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -364,6 +388,9 @@ public class PurchaseRegisterScreen extends javax.swing.JInternalFrame {
                 .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnRemoveProduct2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnAddProduct2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -409,11 +436,11 @@ public class PurchaseRegisterScreen extends javax.swing.JInternalFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(162, 162, 162)
                         .addComponent(labelSale)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnConfirmPurchase, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnCancel, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(19, 19, 19))
+                .addGap(10, 10, 10)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnConfirmPurchase, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(40, 40, 40))
         );
 
         pack();
@@ -422,9 +449,11 @@ public class PurchaseRegisterScreen extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddProduct;
+    private javax.swing.JButton btnAddProduct2;
     private javax.swing.JButton btnCancel;
     private javax.swing.JButton btnConfirmPurchase;
     private javax.swing.JButton btnRemoveProduct;
+    private javax.swing.JButton btnRemoveProduct2;
     private javax.swing.JButton btnSearchProduct;
     private javax.swing.JButton btnSearchProvider;
     private javax.swing.JComboBox<String> comboReceiveForm;

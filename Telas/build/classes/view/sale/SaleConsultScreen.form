@@ -121,15 +121,14 @@
     <Component class="javax.swing.JComboBox" name="comboSearch">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="8">
-            <StringItem index="0" value="ID"/>
-            <StringItem index="1" value="Data"/>
-            <StringItem index="2" value="Nota Fiscal"/>
-            <StringItem index="3" value="Forma de Recebimento"/>
-            <StringItem index="4" value="Quantidade de Parcelas"/>
-            <StringItem index="5" value="Cliente"/>
-            <StringItem index="6" value="Usu&#xe1;rio"/>
-            <StringItem index="7" value="Status"/>
+          <StringArray count="7">
+            <StringItem index="0" value="Sem Filtragem"/>
+            <StringItem index="1" value="ID"/>
+            <StringItem index="2" value="Datas"/>
+            <StringItem index="3" value="Valores"/>
+            <StringItem index="4" value="Notas Fiscais"/>
+            <StringItem index="5" value="Status"/>
+            <StringItem index="6" value=" "/>
           </StringArray>
         </Property>
         <Property name="toolTipText" type="java.lang.String" value="Filtros"/>
