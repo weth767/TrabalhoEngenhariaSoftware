@@ -177,9 +177,13 @@ public class EmployeeUpdateScreen extends javax.swing.JInternalFrame {
         }
         textSalary.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
-        btnUpdate.setText("Atualizar");
+        btnUpdate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/update-24.png"))); // NOI18N
+        btnUpdate.setToolTipText("Atualizar Funcionário");
+        btnUpdate.setBorderPainted(false);
 
-        btnCancel.setText("Cancelar");
+        btnCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/cancel-24.png"))); // NOI18N
+        btnCancel.setToolTipText("Cancelar Operação");
+        btnCancel.setBorderPainted(false);
 
         labelRole.setText("Função");
 
@@ -278,10 +282,10 @@ public class EmployeeUpdateScreen extends javax.swing.JInternalFrame {
                     .addComponent(labelRegister))
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
-                .addGap(294, 294, 294)
-                .addComponent(btnUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(350, 350, 350)
+                .addComponent(btnUpdate)
                 .addGap(18, 18, 18)
-                .addComponent(btnCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnCancel)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -357,11 +361,11 @@ public class EmployeeUpdateScreen extends javax.swing.JInternalFrame {
                     .addComponent(comboRole, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelStatus2)
                     .addComponent(checkBoxStatus))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnUpdate)
-                    .addComponent(btnCancel))
-                .addGap(25, 25, 25))
+                    .addComponent(btnUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(39, 39, 39))
         );
 
         pack();

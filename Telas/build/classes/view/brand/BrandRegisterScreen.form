@@ -30,18 +30,19 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="labelName" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="textName" min="-2" pref="305" max="-2" attributes="0"/>
+                      <Component id="textName" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="132" max="-2" attributes="0"/>
                       <Component id="btnRegister" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="btnClean" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="btnCancel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="100" max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="31" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -53,13 +54,13 @@
                   <Component id="labelName" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="textName" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnRegister" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnClean" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnCancel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnRegister" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                  <Component id="btnClean" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                  <Component id="btnCancel" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="24" max="32767" attributes="0"/>
+              <EmptySpace pref="40" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -77,20 +78,29 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnRegister">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Cadastrar"/>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/resources/images/add-24.png"/>
+        </Property>
         <Property name="toolTipText" type="java.lang.String" value="Cadastrar Marca"/>
+        <Property name="borderPainted" type="boolean" value="false"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnClean">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Limpar"/>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/resources/images/clean-24.png"/>
+        </Property>
         <Property name="toolTipText" type="java.lang.String" value="Limpar Campos"/>
+        <Property name="borderPainted" type="boolean" value="false"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnCancel">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Cancelar"/>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/resources/images/cancel-24.png"/>
+        </Property>
         <Property name="toolTipText" type="java.lang.String" value="Cancelar Opera&#xe7;&#xe3;o"/>
+        <Property name="borderPainted" type="boolean" value="false"/>
       </Properties>
     </Component>
   </SubComponents>

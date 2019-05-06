@@ -72,11 +72,13 @@ public class CashierScreen extends javax.swing.JInternalFrame {
         checkBoxStatus.setText("Aberto?");
         checkBoxStatus.setToolTipText("Status de funcionamento do caixa");
 
-        btnOpen.setText("Abrir");
+        btnOpen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/cashier-24.png"))); // NOI18N
         btnOpen.setToolTipText("Abrir Caixa");
+        btnOpen.setBorderPainted(false);
 
-        btnClose.setText("Fechar");
+        btnClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/cancel-24.png"))); // NOI18N
         btnClose.setToolTipText("Fechar caixa");
+        btnClose.setBorderPainted(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -110,7 +112,7 @@ public class CashierScreen extends javax.swing.JInternalFrame {
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
-                .addGap(137, 137, 137)
+                .addGap(150, 150, 150)
                 .addComponent(btnOpen)
                 .addGap(18, 18, 18)
                 .addComponent(btnClose)
@@ -137,9 +139,9 @@ public class CashierScreen extends javax.swing.JInternalFrame {
                     .addComponent(checkBoxStatus))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnOpen)
-                    .addComponent(btnClose))
-                .addContainerGap(20, Short.MAX_VALUE))
+                    .addComponent(btnOpen, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnClose, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
         pack();

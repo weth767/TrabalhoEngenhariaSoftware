@@ -40,8 +40,8 @@ public class EmployeeConsultScreen extends javax.swing.JInternalFrame {
         btnSearch = new javax.swing.JButton();
         btnCleanTable = new javax.swing.JButton();
         btnCancel = new javax.swing.JButton();
-        btnUpdate = new javax.swing.JButton();
         btnRemove = new javax.swing.JButton();
+        btnUpdate = new javax.swing.JButton();
         comboSearch = new javax.swing.JComboBox<>();
 
         setClosable(true);
@@ -66,6 +66,7 @@ public class EmployeeConsultScreen extends javax.swing.JInternalFrame {
                 return canEdit [columnIndex];
             }
         });
+        employeesTable.setToolTipText("Tabela de Funcionários");
         employeesTable.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
         employeesTable.setSurrendersFocusOnKeystroke(true);
         employeesTable.getTableHeader().setResizingAllowed(false);
@@ -119,17 +120,30 @@ public class EmployeeConsultScreen extends javax.swing.JInternalFrame {
 
         labelFilter.setText("Filtro:");
 
-        btnSearch.setText("Consultar");
+        textFilter.setToolTipText("Informações que serão buscadas");
 
-        btnCleanTable.setText("Limpar");
+        btnSearch.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/search-24.png"))); // NOI18N
+        btnSearch.setToolTipText("Consultar Funcionários");
+        btnSearch.setBorderPainted(false);
 
-        btnCancel.setText("Cancelar");
+        btnCleanTable.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/clean-24.png"))); // NOI18N
+        btnCleanTable.setToolTipText("Limpar Tabela");
+        btnCleanTable.setBorderPainted(false);
 
-        btnUpdate.setText("Alterar");
+        btnCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/cancel-24.png"))); // NOI18N
+        btnCancel.setToolTipText("Cancelar Operação");
+        btnCancel.setBorderPainted(false);
 
-        btnRemove.setText("Deletar");
+        btnRemove.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/delete-24.png"))); // NOI18N
+        btnRemove.setToolTipText("Apagar Funcionário");
+        btnRemove.setBorderPainted(false);
 
-        comboSearch.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ID", "Nome", "CPF", "RG", "Data de Cadastro", "Sexo", "Data de Nascimento", "E-mail", "Telefone", "Celular", "CEP", "Estado", "Cidade", "Função", "Data de Admissão", "Data de Demissão ", "Salário", "Status" }));
+        btnUpdate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/update-24.png"))); // NOI18N
+        btnUpdate.setToolTipText("Atualizar Funcionário");
+        btnUpdate.setBorderPainted(false);
+
+        comboSearch.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sem Filtragem", "ID", "Nome", "CPF", "Status" }));
+        comboSearch.setToolTipText("Filtro");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -138,7 +152,7 @@ public class EmployeeConsultScreen extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(196, 196, 196)
+                        .addGap(205, 205, 205)
                         .addComponent(labelFilter)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(comboSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -152,17 +166,14 @@ public class EmployeeConsultScreen extends javax.swing.JInternalFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 865, Short.MAX_VALUE)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(btnCleanTable)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnCancel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(btnUpdate)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnRemove)))))
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(375, 375, 375)
-                .addComponent(btnCleanTable)
-                .addGap(18, 18, 18)
-                .addComponent(btnCancel)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -172,18 +183,18 @@ public class EmployeeConsultScreen extends javax.swing.JInternalFrame {
                     .addComponent(labelFilter)
                     .addComponent(textFilter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(comboSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnSearch))
+                    .addComponent(btnSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnUpdate)
-                    .addComponent(btnRemove))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCleanTable)
-                    .addComponent(btnCancel))
-                .addGap(30, 30, 30))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnRemove, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnCleanTable, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
         pack();

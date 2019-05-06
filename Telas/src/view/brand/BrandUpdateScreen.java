@@ -38,11 +38,13 @@ public class BrandUpdateScreen extends javax.swing.JInternalFrame {
         setTitle("Atualização de Marcas");
         setToolTipText("Tela de Atualização de Marcas");
 
-        btnUpdate.setText("Atualizar");
+        btnUpdate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/update-24.png"))); // NOI18N
         btnUpdate.setToolTipText("Atualizar Marca");
+        btnUpdate.setBorderPainted(false);
 
-        btnCancel.setText("Cancelar");
+        btnCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/cancel-24.png"))); // NOI18N
         btnCancel.setToolTipText("Cancelar Operação");
+        btnCancel.setBorderPainted(false);
 
         labelName.setText("Nome");
 
@@ -60,19 +62,18 @@ public class BrandUpdateScreen extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 231, Short.MAX_VALUE)
+                        .addGap(0, 234, Short.MAX_VALUE)
                         .addComponent(labelStatus)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(4, 4, 4)
                         .addComponent(checkBoxStatus))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(labelName)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(textName, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(8, 8, 8)))
-                .addContainerGap(27, Short.MAX_VALUE))
+                        .addComponent(textName, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(13, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addGap(118, 118, 118)
+                .addGap(141, 141, 141)
                 .addComponent(btnUpdate)
                 .addGap(18, 18, 18)
                 .addComponent(btnCancel)
@@ -89,11 +90,11 @@ public class BrandUpdateScreen extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelStatus)
                     .addComponent(checkBoxStatus))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnUpdate)
-                    .addComponent(btnCancel))
-                .addContainerGap(32, Short.MAX_VALUE))
+                    .addComponent(btnUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
 
         pack();
