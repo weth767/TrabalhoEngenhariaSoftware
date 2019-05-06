@@ -56,6 +56,7 @@ public class BillReceiveConsult extends javax.swing.JInternalFrame {
                 return canEdit [columnIndex];
             }
         });
+        jTable1.setToolTipText("Tabela de Contas a Receber");
         jScrollPane1.setViewportView(jTable1);
         if (jTable1.getColumnModel().getColumnCount() > 0) {
             jTable1.getColumnModel().getColumn(0).setResizable(false);
@@ -74,16 +75,37 @@ public class BillReceiveConsult extends javax.swing.JInternalFrame {
 
         labelFilter.setText("Filtro");
 
-        comboBillReceive.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NF", "CPF do Cliente" }));
-        comboBillReceive.setToolTipText("");
+        comboBillReceive.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sem Filtragem", "ID", "Datas de Vencimento", "Forma de Recebimento", "Valores de Parcela", "Status" }));
+        comboBillReceive.setToolTipText("Filtro");
 
-        btnSearch.setText("Consultar");
+        textFilter.setToolTipText("Informações a serem buscadas");
 
-        btnReceiveBill.setText("Receber Conta");
+        btnSearch.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/search-24.png"))); // NOI18N
+        btnSearch.setToolTipText("Consultar Contas a Receber");
+        btnSearch.setBorderPainted(false);
+        btnSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSearchActionPerformed(evt);
+            }
+        });
+
+        btnReceiveBill.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/receive-24.png"))); // NOI18N
         btnReceiveBill.setToolTipText("Retornar dados para a tela de Receber Conta");
+        btnReceiveBill.setBorderPainted(false);
+        btnReceiveBill.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReceiveBillActionPerformed(evt);
+            }
+        });
 
-        btnCancel.setText("Cancelar");
+        btnCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/cancel-24.png"))); // NOI18N
         btnCancel.setToolTipText("Cancelar Operação");
+        btnCancel.setBorderPainted(false);
+        btnCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -97,7 +119,7 @@ public class BillReceiveConsult extends javax.swing.JInternalFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(208, 208, 208)
+                                .addGap(267, 267, 267)
                                 .addComponent(btnReceiveBill)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(btnCancel))
@@ -121,18 +143,30 @@ public class BillReceiveConsult extends javax.swing.JInternalFrame {
                     .addComponent(labelFilter)
                     .addComponent(comboBillReceive, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textFilter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnSearch))
+                    .addComponent(btnSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnReceiveBill)
-                    .addComponent(btnCancel))
-                .addGap(31, 31, 31))
+                    .addComponent(btnReceiveBill, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(40, 40, 40))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSearchActionPerformed
+
+    private void btnReceiveBillActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReceiveBillActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnReceiveBillActionPerformed
+
+    private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCancelActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

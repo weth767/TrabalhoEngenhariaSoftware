@@ -167,6 +167,9 @@
         <Property name="toolTipText" type="java.lang.String" value="Abrir Caixa"/>
         <Property name="borderPainted" type="boolean" value="false"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnOpenActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnClose">
       <Properties>
@@ -176,6 +179,9 @@
         <Property name="toolTipText" type="java.lang.String" value="Fechar caixa"/>
         <Property name="borderPainted" type="boolean" value="false"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCloseActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

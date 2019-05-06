@@ -50,12 +50,27 @@ public class CategoryConsultScreen extends javax.swing.JInternalFrame {
 
         btnSearch.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/search-24.png"))); // NOI18N
         btnSearch.setToolTipText("Consulta de categorias");
+        btnSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSearchActionPerformed(evt);
+            }
+        });
 
         btnRemove.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/delete-24.png"))); // NOI18N
         btnRemove.setToolTipText("Apagar uma categoria");
+        btnRemove.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRemoveActionPerformed(evt);
+            }
+        });
 
         btnCleanTable.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/clean-24.png"))); // NOI18N
         btnCleanTable.setToolTipText("Limpar as linhas da tabela(não apaga os dados)");
+        btnCleanTable.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCleanTableActionPerformed(evt);
+            }
+        });
 
         btnUpdate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/update-24.png"))); // NOI18N
         btnUpdate.setToolTipText("Alterar uma categoria");
@@ -67,6 +82,11 @@ public class CategoryConsultScreen extends javax.swing.JInternalFrame {
 
         btnCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/cancel-24.png"))); // NOI18N
         btnCancel.setToolTipText("Cancelar Operação");
+        btnCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelActionPerformed(evt);
+            }
+        });
 
         categoriesTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -156,6 +176,22 @@ public class CategoryConsultScreen extends javax.swing.JInternalFrame {
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
 
     }//GEN-LAST:event_btnUpdateActionPerformed
+
+    private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSearchActionPerformed
+
+    private void btnCleanTableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCleanTableActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCleanTableActionPerformed
+
+    private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCancelActionPerformed
+
+    private void btnRemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoveActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnRemoveActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

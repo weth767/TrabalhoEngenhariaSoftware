@@ -75,10 +75,20 @@ public class CashierScreen extends javax.swing.JInternalFrame {
         btnOpen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/cashier-24.png"))); // NOI18N
         btnOpen.setToolTipText("Abrir Caixa");
         btnOpen.setBorderPainted(false);
+        btnOpen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOpenActionPerformed(evt);
+            }
+        });
 
         btnClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/cancel-24.png"))); // NOI18N
         btnClose.setToolTipText("Fechar caixa");
         btnClose.setBorderPainted(false);
+        btnClose.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCloseActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -146,6 +156,14 @@ public class CashierScreen extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnOpenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOpenActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnOpenActionPerformed
+
+    private void btnCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCloseActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCloseActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

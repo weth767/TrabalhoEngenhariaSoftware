@@ -116,6 +116,9 @@
         </Property>
         <Property name="toolTipText" type="java.lang.String" value="Consulta de categorias"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSearchActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnRemove">
       <Properties>
@@ -124,6 +127,9 @@
         </Property>
         <Property name="toolTipText" type="java.lang.String" value="Apagar uma categoria"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRemoveActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnCleanTable">
       <Properties>
@@ -132,6 +138,9 @@
         </Property>
         <Property name="toolTipText" type="java.lang.String" value="Limpar as linhas da tabela(n&#xe3;o apaga os dados)"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCleanTableActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnUpdate">
       <Properties>
@@ -151,6 +160,9 @@
         </Property>
         <Property name="toolTipText" type="java.lang.String" value="Cancelar Opera&#xe7;&#xe3;o"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCancelActionPerformed"/>
+      </Events>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
       <AuxValues>

@@ -71,7 +71,7 @@ public class MainScreen extends javax.swing.JFrame {
         financesPayment = new javax.swing.JMenuItem();
         financesReceive = new javax.swing.JMenuItem();
         financesCashier = new javax.swing.JMenuItem();
-        jMenu1 = new javax.swing.JMenu();
+        menuReport = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("ACEA");
@@ -82,9 +82,11 @@ public class MainScreen extends javax.swing.JFrame {
             }
         });
 
+        menuClient.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/client-24.png"))); // NOI18N
         menuClient.setText("Cliente");
 
         clientCreate.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_MASK));
+        clientCreate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/add-24.png"))); // NOI18N
         clientCreate.setText("Cadastrar");
         clientCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,6 +96,7 @@ public class MainScreen extends javax.swing.JFrame {
         menuClient.add(clientCreate);
 
         clientConsult.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.SHIFT_MASK));
+        clientConsult.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/search-24.png"))); // NOI18N
         clientConsult.setText("Consultar");
         clientConsult.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,9 +107,11 @@ public class MainScreen extends javax.swing.JFrame {
 
         menuBar.add(menuClient);
 
+        menuProvider.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/provider-24.png"))); // NOI18N
         menuProvider.setText("Fornecedor");
 
         providerCreate.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, java.awt.event.InputEvent.CTRL_MASK));
+        providerCreate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/add-24.png"))); // NOI18N
         providerCreate.setText("Cadastrar");
         providerCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -116,6 +121,7 @@ public class MainScreen extends javax.swing.JFrame {
         menuProvider.add(providerCreate);
 
         providerConsult.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, java.awt.event.InputEvent.SHIFT_MASK));
+        providerConsult.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/search-24.png"))); // NOI18N
         providerConsult.setText("Consultar");
         providerConsult.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,33 +132,61 @@ public class MainScreen extends javax.swing.JFrame {
 
         menuBar.add(menuProvider);
 
+        menuEmployee.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/employee-24.png"))); // NOI18N
         menuEmployee.setText("Funcionário");
 
         employeeCreate.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, java.awt.event.InputEvent.CTRL_MASK));
+        employeeCreate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/add-24.png"))); // NOI18N
         employeeCreate.setText("Cadastrar");
+        employeeCreate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                employeeCreateActionPerformed(evt);
+            }
+        });
         menuEmployee.add(employeeCreate);
 
         employeeConsult.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, java.awt.event.InputEvent.SHIFT_MASK));
+        employeeConsult.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/search-24.png"))); // NOI18N
         employeeConsult.setText("Consultar");
+        employeeConsult.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                employeeConsultActionPerformed(evt);
+            }
+        });
         menuEmployee.add(employeeConsult);
 
         menuBar.add(menuEmployee);
 
+        menuProduct.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/product-24.png"))); // NOI18N
         menuProduct.setText("Produto");
 
         productCreate.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.CTRL_MASK));
+        productCreate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/add-24.png"))); // NOI18N
         productCreate.setText("Cadastrar");
+        productCreate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                productCreateActionPerformed(evt);
+            }
+        });
         menuProduct.add(productCreate);
 
         productConsult.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.SHIFT_MASK));
+        productConsult.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/search-24.png"))); // NOI18N
         productConsult.setText("Consultar");
+        productConsult.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                productConsultActionPerformed(evt);
+            }
+        });
         menuProduct.add(productConsult);
 
         menuBar.add(menuProduct);
 
+        menuBrand.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/brand-24.png"))); // NOI18N
         menuBrand.setText("Marca");
 
         brandCreate.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.CTRL_MASK));
+        brandCreate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/add-24.png"))); // NOI18N
         brandCreate.setText("Cadastrar");
         brandCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -162,26 +196,47 @@ public class MainScreen extends javax.swing.JFrame {
         menuBrand.add(brandCreate);
 
         brandConsult.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.SHIFT_MASK));
+        brandConsult.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/search-24.png"))); // NOI18N
         brandConsult.setText("Consultar");
+        brandConsult.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                brandConsultActionPerformed(evt);
+            }
+        });
         menuBrand.add(brandConsult);
 
         menuBar.add(menuBrand);
 
+        menuCategory.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/category-24.png"))); // NOI18N
         menuCategory.setText("Categoria");
 
         categoryCreate.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_G, java.awt.event.InputEvent.CTRL_MASK));
+        categoryCreate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/add-24.png"))); // NOI18N
         categoryCreate.setText("Cadastrar");
+        categoryCreate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                categoryCreateActionPerformed(evt);
+            }
+        });
         menuCategory.add(categoryCreate);
 
         categoryConsult.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_G, java.awt.event.InputEvent.SHIFT_MASK));
+        categoryConsult.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/search-24.png"))); // NOI18N
         categoryConsult.setText("Consultar");
+        categoryConsult.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                categoryConsultActionPerformed(evt);
+            }
+        });
         menuCategory.add(categoryConsult);
 
         menuBar.add(menuCategory);
 
+        menuFinances.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/finances-24.png"))); // NOI18N
         menuFinances.setText("Financeiro");
 
         financesSale.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, java.awt.event.InputEvent.CTRL_MASK));
+        financesSale.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/sale-24.png"))); // NOI18N
         financesSale.setText("Venda");
         financesSale.setToolTipText("");
         financesSale.addActionListener(new java.awt.event.ActionListener() {
@@ -192,25 +247,50 @@ public class MainScreen extends javax.swing.JFrame {
         menuFinances.add(financesSale);
 
         financesPurchase.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_MASK));
+        financesPurchase.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/purchase-24.png"))); // NOI18N
         financesPurchase.setText("Compra");
+        financesPurchase.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                financesPurchaseActionPerformed(evt);
+            }
+        });
         menuFinances.add(financesPurchase);
 
         financesPayment.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_MASK));
+        financesPayment.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/payment-24.png"))); // NOI18N
         financesPayment.setText("Pagamento");
+        financesPayment.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                financesPaymentActionPerformed(evt);
+            }
+        });
         menuFinances.add(financesPayment);
 
         financesReceive.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.CTRL_MASK));
+        financesReceive.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/receive-24.png"))); // NOI18N
         financesReceive.setText("Recebimento");
+        financesReceive.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                financesReceiveActionPerformed(evt);
+            }
+        });
         menuFinances.add(financesReceive);
 
         financesCashier.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.SHIFT_MASK));
+        financesCashier.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/cashier-24.png"))); // NOI18N
         financesCashier.setText("Caixa");
+        financesCashier.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                financesCashierActionPerformed(evt);
+            }
+        });
         menuFinances.add(financesCashier);
 
         menuBar.add(menuFinances);
 
-        jMenu1.setText("Relatórios");
-        menuBar.add(jMenu1);
+        menuReport.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/report-24.png"))); // NOI18N
+        menuReport.setText("Relatórios");
+        menuBar.add(menuReport);
 
         setJMenuBar(menuBar);
 
@@ -222,7 +302,7 @@ public class MainScreen extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 376, Short.MAX_VALUE)
+            .addGap(0, 368, Short.MAX_VALUE)
         );
 
         pack();
@@ -275,6 +355,50 @@ public class MainScreen extends javax.swing.JFrame {
         
     }//GEN-LAST:event_brandCreateActionPerformed
 
+    private void brandConsultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_brandConsultActionPerformed
+        
+    }//GEN-LAST:event_brandConsultActionPerformed
+
+    private void employeeCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_employeeCreateActionPerformed
+        
+    }//GEN-LAST:event_employeeCreateActionPerformed
+
+    private void employeeConsultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_employeeConsultActionPerformed
+        
+    }//GEN-LAST:event_employeeConsultActionPerformed
+
+    private void productCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productCreateActionPerformed
+        
+    }//GEN-LAST:event_productCreateActionPerformed
+
+    private void productConsultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productConsultActionPerformed
+        
+    }//GEN-LAST:event_productConsultActionPerformed
+
+    private void categoryCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_categoryCreateActionPerformed
+        
+    }//GEN-LAST:event_categoryCreateActionPerformed
+
+    private void categoryConsultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_categoryConsultActionPerformed
+       
+    }//GEN-LAST:event_categoryConsultActionPerformed
+
+    private void financesPurchaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_financesPurchaseActionPerformed
+        
+    }//GEN-LAST:event_financesPurchaseActionPerformed
+
+    private void financesPaymentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_financesPaymentActionPerformed
+        
+    }//GEN-LAST:event_financesPaymentActionPerformed
+
+    private void financesReceiveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_financesReceiveActionPerformed
+        
+    }//GEN-LAST:event_financesReceiveActionPerformed
+
+    private void financesCashierActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_financesCashierActionPerformed
+        
+    }//GEN-LAST:event_financesCashierActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -312,7 +436,6 @@ public class MainScreen extends javax.swing.JFrame {
     private javax.swing.JMenuItem financesPurchase;
     private javax.swing.JMenuItem financesReceive;
     private javax.swing.JMenuItem financesSale;
-    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JMenu menuBrand;
     private javax.swing.JMenu menuCategory;
@@ -321,6 +444,7 @@ public class MainScreen extends javax.swing.JFrame {
     private javax.swing.JMenu menuFinances;
     private javax.swing.JMenu menuProduct;
     private javax.swing.JMenu menuProvider;
+    private javax.swing.JMenu menuReport;
     private javax.swing.JMenuItem productConsult;
     private javax.swing.JMenuItem productCreate;
     private javax.swing.JMenuItem providerConsult;

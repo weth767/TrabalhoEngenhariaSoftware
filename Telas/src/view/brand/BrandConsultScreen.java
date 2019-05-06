@@ -87,10 +87,20 @@ public class BrandConsultScreen extends javax.swing.JInternalFrame {
         btnRemove.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/delete-24.png"))); // NOI18N
         btnRemove.setToolTipText("Apagar uma marca");
         btnRemove.setBorderPainted(false);
+        btnRemove.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRemoveActionPerformed(evt);
+            }
+        });
 
         btnCleanTable.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/clean-24.png"))); // NOI18N
         btnCleanTable.setToolTipText("Limpar as linhas da tabela(não apaga os dados)");
         btnCleanTable.setBorderPainted(false);
+        btnCleanTable.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCleanTableActionPerformed(evt);
+            }
+        });
 
         btnUpdate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/search-24.png"))); // NOI18N
         btnUpdate.setToolTipText("Atualizar uma marca");
@@ -104,6 +114,11 @@ public class BrandConsultScreen extends javax.swing.JInternalFrame {
         btnCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/cancel-24.png"))); // NOI18N
         btnCancel.setToolTipText("Cancelar Operação");
         btnCancel.setBorderPainted(false);
+        btnCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -161,6 +176,18 @@ public class BrandConsultScreen extends javax.swing.JInternalFrame {
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
 
     }//GEN-LAST:event_btnUpdateActionPerformed
+
+    private void btnRemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoveActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnRemoveActionPerformed
+
+    private void btnCleanTableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCleanTableActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCleanTableActionPerformed
+
+    private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCancelActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
