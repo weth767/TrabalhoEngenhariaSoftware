@@ -66,10 +66,18 @@ public class MainScreen extends javax.swing.JFrame {
         categoryCreate = new javax.swing.JMenuItem();
         categoryConsult = new javax.swing.JMenuItem();
         menuFinances = new javax.swing.JMenu();
-        financesSale = new javax.swing.JMenuItem();
-        financesPurchase = new javax.swing.JMenuItem();
-        financesPayment = new javax.swing.JMenuItem();
-        financesReceive = new javax.swing.JMenuItem();
+        financesRegisterSale = new javax.swing.JMenuItem();
+        financesConsultSales = new javax.swing.JMenuItem();
+        jSeparator1 = new javax.swing.JPopupMenu.Separator();
+        financesRegisterPurchase = new javax.swing.JMenuItem();
+        financesConsultPurchases = new javax.swing.JMenuItem();
+        jSeparator2 = new javax.swing.JPopupMenu.Separator();
+        financesPaymentRegister = new javax.swing.JMenuItem();
+        financesPaymentConsult = new javax.swing.JMenuItem();
+        jSeparator4 = new javax.swing.JPopupMenu.Separator();
+        financesReceiveRegister = new javax.swing.JMenuItem();
+        financesReceiveConsult = new javax.swing.JMenuItem();
+        jSeparator3 = new javax.swing.JPopupMenu.Separator();
         financesCashier = new javax.swing.JMenuItem();
         menuReport = new javax.swing.JMenu();
         menuSaleReport = new javax.swing.JMenuItem();
@@ -239,46 +247,90 @@ public class MainScreen extends javax.swing.JFrame {
         menuFinances.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/finances-24.png"))); // NOI18N
         menuFinances.setText("Financeiro");
 
-        financesSale.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, java.awt.event.InputEvent.CTRL_MASK));
-        financesSale.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/sale-24.png"))); // NOI18N
-        financesSale.setText("Venda");
-        financesSale.setToolTipText("");
-        financesSale.addActionListener(new java.awt.event.ActionListener() {
+        financesRegisterSale.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, java.awt.event.InputEvent.CTRL_MASK));
+        financesRegisterSale.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/sale-24.png"))); // NOI18N
+        financesRegisterSale.setText("Venda");
+        financesRegisterSale.setToolTipText("");
+        financesRegisterSale.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                financesSaleActionPerformed(evt);
+                financesRegisterSaleActionPerformed(evt);
             }
         });
-        menuFinances.add(financesSale);
+        menuFinances.add(financesRegisterSale);
 
-        financesPurchase.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_MASK));
-        financesPurchase.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/purchase-24.png"))); // NOI18N
-        financesPurchase.setText("Compra");
-        financesPurchase.addActionListener(new java.awt.event.ActionListener() {
+        financesConsultSales.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, java.awt.event.InputEvent.SHIFT_MASK));
+        financesConsultSales.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/search-24.png"))); // NOI18N
+        financesConsultSales.setText("Consultar Vendas");
+        financesConsultSales.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                financesPurchaseActionPerformed(evt);
+                financesConsultSalesActionPerformed(evt);
             }
         });
-        menuFinances.add(financesPurchase);
+        menuFinances.add(financesConsultSales);
+        menuFinances.add(jSeparator1);
 
-        financesPayment.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_MASK));
-        financesPayment.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/payment-24.png"))); // NOI18N
-        financesPayment.setText("Pagamento");
-        financesPayment.addActionListener(new java.awt.event.ActionListener() {
+        financesRegisterPurchase.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_MASK));
+        financesRegisterPurchase.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/purchase-24.png"))); // NOI18N
+        financesRegisterPurchase.setText("Compra");
+        financesRegisterPurchase.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                financesPaymentActionPerformed(evt);
+                financesRegisterPurchaseActionPerformed(evt);
             }
         });
-        menuFinances.add(financesPayment);
+        menuFinances.add(financesRegisterPurchase);
 
-        financesReceive.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.CTRL_MASK));
-        financesReceive.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/receive-24.png"))); // NOI18N
-        financesReceive.setText("Recebimento");
-        financesReceive.addActionListener(new java.awt.event.ActionListener() {
+        financesConsultPurchases.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.SHIFT_MASK));
+        financesConsultPurchases.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/search-24.png"))); // NOI18N
+        financesConsultPurchases.setText("Consultar Compras");
+        financesConsultPurchases.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                financesReceiveActionPerformed(evt);
+                financesConsultPurchasesActionPerformed(evt);
             }
         });
-        menuFinances.add(financesReceive);
+        menuFinances.add(financesConsultPurchases);
+        menuFinances.add(jSeparator2);
+
+        financesPaymentRegister.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_MASK));
+        financesPaymentRegister.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/payment-24.png"))); // NOI18N
+        financesPaymentRegister.setText("Pagamento");
+        financesPaymentRegister.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                financesPaymentRegisterActionPerformed(evt);
+            }
+        });
+        menuFinances.add(financesPaymentRegister);
+
+        financesPaymentConsult.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.SHIFT_MASK));
+        financesPaymentConsult.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/search-24.png"))); // NOI18N
+        financesPaymentConsult.setText("Consultar Pagamentos");
+        financesPaymentConsult.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                financesPaymentConsultActionPerformed(evt);
+            }
+        });
+        menuFinances.add(financesPaymentConsult);
+        menuFinances.add(jSeparator4);
+
+        financesReceiveRegister.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.CTRL_MASK));
+        financesReceiveRegister.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/receive-24.png"))); // NOI18N
+        financesReceiveRegister.setText("Recebimento");
+        financesReceiveRegister.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                financesReceiveRegisterActionPerformed(evt);
+            }
+        });
+        menuFinances.add(financesReceiveRegister);
+
+        financesReceiveConsult.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.SHIFT_MASK));
+        financesReceiveConsult.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/search-24.png"))); // NOI18N
+        financesReceiveConsult.setText("Consultar Recebimentos");
+        financesReceiveConsult.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                financesReceiveConsultActionPerformed(evt);
+            }
+        });
+        menuFinances.add(financesReceiveConsult);
+        menuFinances.add(jSeparator3);
 
         financesCashier.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.SHIFT_MASK));
         financesCashier.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/cashier-24.png"))); // NOI18N
@@ -355,9 +407,10 @@ public class MainScreen extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
-        int answer = JOptionPane.showConfirmDialog(null, "Deseja realmente sair?", "Confirmação", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
-        if (answer == JOptionPane.YES_OPTION) {
-            System.exit(answer);
+        int answer = JOptionPane.showConfirmDialog(this,"Deseja realmente sair do sistema?",
+                "Verificação de saída", JOptionPane.YES_NO_OPTION,JOptionPane.WARNING_MESSAGE);
+        if(answer == JOptionPane.YES_OPTION){
+            System.exit(0);
         }
     }//GEN-LAST:event_formWindowClosing
 
@@ -389,12 +442,12 @@ public class MainScreen extends javax.swing.JFrame {
         pcscreen.show();
     }//GEN-LAST:event_providerConsultActionPerformed
 
-    private void financesSaleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_financesSaleActionPerformed
+    private void financesRegisterSaleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_financesRegisterSaleActionPerformed
         SaleRegisterScreen srscreen = new SaleRegisterScreen();
         panel.add(srscreen);
         srscreen.setVisible(true);
         srscreen.show();
-    }//GEN-LAST:event_financesSaleActionPerformed
+    }//GEN-LAST:event_financesRegisterSaleActionPerformed
 
     private void brandCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_brandCreateActionPerformed
         
@@ -428,17 +481,17 @@ public class MainScreen extends javax.swing.JFrame {
        
     }//GEN-LAST:event_categoryConsultActionPerformed
 
-    private void financesPurchaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_financesPurchaseActionPerformed
+    private void financesRegisterPurchaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_financesRegisterPurchaseActionPerformed
         
-    }//GEN-LAST:event_financesPurchaseActionPerformed
+    }//GEN-LAST:event_financesRegisterPurchaseActionPerformed
 
-    private void financesPaymentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_financesPaymentActionPerformed
+    private void financesPaymentRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_financesPaymentRegisterActionPerformed
         
-    }//GEN-LAST:event_financesPaymentActionPerformed
+    }//GEN-LAST:event_financesPaymentRegisterActionPerformed
 
-    private void financesReceiveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_financesReceiveActionPerformed
+    private void financesReceiveRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_financesReceiveRegisterActionPerformed
         
-    }//GEN-LAST:event_financesReceiveActionPerformed
+    }//GEN-LAST:event_financesReceiveRegisterActionPerformed
 
     private void financesCashierActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_financesCashierActionPerformed
         
@@ -459,6 +512,22 @@ public class MainScreen extends javax.swing.JFrame {
     private void amountProductReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_amountProductReportActionPerformed
         
     }//GEN-LAST:event_amountProductReportActionPerformed
+
+    private void financesConsultSalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_financesConsultSalesActionPerformed
+        
+    }//GEN-LAST:event_financesConsultSalesActionPerformed
+
+    private void financesConsultPurchasesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_financesConsultPurchasesActionPerformed
+        
+    }//GEN-LAST:event_financesConsultPurchasesActionPerformed
+
+    private void financesPaymentConsultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_financesPaymentConsultActionPerformed
+        
+    }//GEN-LAST:event_financesPaymentConsultActionPerformed
+
+    private void financesReceiveConsultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_financesReceiveConsultActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_financesReceiveConsultActionPerformed
 
     /**
      * @param args the command line arguments
@@ -494,10 +563,18 @@ public class MainScreen extends javax.swing.JFrame {
     private javax.swing.JMenuItem employeeConsult;
     private javax.swing.JMenuItem employeeCreate;
     private javax.swing.JMenuItem financesCashier;
-    private javax.swing.JMenuItem financesPayment;
-    private javax.swing.JMenuItem financesPurchase;
-    private javax.swing.JMenuItem financesReceive;
-    private javax.swing.JMenuItem financesSale;
+    private javax.swing.JMenuItem financesConsultPurchases;
+    private javax.swing.JMenuItem financesConsultSales;
+    private javax.swing.JMenuItem financesPaymentConsult;
+    private javax.swing.JMenuItem financesPaymentRegister;
+    private javax.swing.JMenuItem financesReceiveConsult;
+    private javax.swing.JMenuItem financesReceiveRegister;
+    private javax.swing.JMenuItem financesRegisterPurchase;
+    private javax.swing.JMenuItem financesRegisterSale;
+    private javax.swing.JPopupMenu.Separator jSeparator1;
+    private javax.swing.JPopupMenu.Separator jSeparator2;
+    private javax.swing.JPopupMenu.Separator jSeparator3;
+    private javax.swing.JPopupMenu.Separator jSeparator4;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JMenu menuBrand;
     private javax.swing.JMenu menuCategory;

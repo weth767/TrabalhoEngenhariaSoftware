@@ -5,6 +5,9 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
+import javax.swing.UIManager;
+
 /**
  *
  * @author weth767
@@ -16,6 +19,7 @@ public class SystemLogin extends javax.swing.JFrame {
      */
     public SystemLogin() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -36,6 +40,11 @@ public class SystemLogin extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("Login do Sistema");
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
 
         labelLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/login-24.png"))); // NOI18N
         labelLogin.setText("Usuário");
@@ -45,6 +54,8 @@ public class SystemLogin extends javax.swing.JFrame {
 
         labelPassword.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/password-24.png"))); // NOI18N
         labelPassword.setText("Senha");
+
+        textPassword.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         btnConnect.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/connect-24.png"))); // NOI18N
         btnConnect.setToolTipText("Conectar ao Sistema");
@@ -114,6 +125,14 @@ public class SystemLogin extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnCancelActionPerformed
 
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        int answer = JOptionPane.showConfirmDialog(this,"Deseja realmente sair do sistema?",
+                "Verificação de saída", JOptionPane.YES_NO_OPTION,JOptionPane.WARNING_MESSAGE);
+        if(answer == JOptionPane.YES_OPTION){
+            System.exit(0);
+        }
+    }//GEN-LAST:event_formWindowClosing
+
     /**
      * @param args the command line arguments
      */
@@ -124,12 +143,7 @@ public class SystemLogin extends javax.swing.JFrame {
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (ClassNotFoundException ex) {
             java.util.logging.Logger.getLogger(SystemLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
