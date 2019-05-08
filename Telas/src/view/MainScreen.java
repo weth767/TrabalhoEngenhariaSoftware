@@ -72,6 +72,10 @@ public class MainScreen extends javax.swing.JFrame {
         financesReceive = new javax.swing.JMenuItem();
         financesCashier = new javax.swing.JMenuItem();
         menuReport = new javax.swing.JMenu();
+        menuSaleReport = new javax.swing.JMenuItem();
+        menuPurchaseReport = new javax.swing.JMenuItem();
+        menuSaleMonthlyHistory = new javax.swing.JMenuItem();
+        amountProductReport = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("ACEA");
@@ -290,6 +294,47 @@ public class MainScreen extends javax.swing.JFrame {
 
         menuReport.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/report-24.png"))); // NOI18N
         menuReport.setText("Relatórios");
+
+        menuSaleReport.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_1, java.awt.event.InputEvent.CTRL_MASK));
+        menuSaleReport.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/sale-24.png"))); // NOI18N
+        menuSaleReport.setText("Relatório de Vendas");
+        menuSaleReport.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuSaleReportActionPerformed(evt);
+            }
+        });
+        menuReport.add(menuSaleReport);
+
+        menuPurchaseReport.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_2, java.awt.event.InputEvent.CTRL_MASK));
+        menuPurchaseReport.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/purchase-24.png"))); // NOI18N
+        menuPurchaseReport.setText("Relatório de Compras");
+        menuPurchaseReport.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuPurchaseReportActionPerformed(evt);
+            }
+        });
+        menuReport.add(menuPurchaseReport);
+
+        menuSaleMonthlyHistory.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_3, java.awt.event.InputEvent.CTRL_MASK));
+        menuSaleMonthlyHistory.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/report-24.png"))); // NOI18N
+        menuSaleMonthlyHistory.setText("Relatório de Ficha Mensal");
+        menuSaleMonthlyHistory.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuSaleMonthlyHistoryActionPerformed(evt);
+            }
+        });
+        menuReport.add(menuSaleMonthlyHistory);
+
+        amountProductReport.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_4, java.awt.event.InputEvent.CTRL_MASK));
+        amountProductReport.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/product-24.png"))); // NOI18N
+        amountProductReport.setText("Relatório de Estoque de Produtos");
+        amountProductReport.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                amountProductReportActionPerformed(evt);
+            }
+        });
+        menuReport.add(amountProductReport);
+
         menuBar.add(menuReport);
 
         setJMenuBar(menuBar);
@@ -399,6 +444,22 @@ public class MainScreen extends javax.swing.JFrame {
         
     }//GEN-LAST:event_financesCashierActionPerformed
 
+    private void menuPurchaseReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPurchaseReportActionPerformed
+       
+    }//GEN-LAST:event_menuPurchaseReportActionPerformed
+
+    private void menuSaleMonthlyHistoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSaleMonthlyHistoryActionPerformed
+        
+    }//GEN-LAST:event_menuSaleMonthlyHistoryActionPerformed
+
+    private void menuSaleReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSaleReportActionPerformed
+        
+    }//GEN-LAST:event_menuSaleReportActionPerformed
+
+    private void amountProductReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_amountProductReportActionPerformed
+        
+    }//GEN-LAST:event_amountProductReportActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -423,6 +484,7 @@ public class MainScreen extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem amountProductReport;
     private javax.swing.JMenuItem brandConsult;
     private javax.swing.JMenuItem brandCreate;
     private javax.swing.JMenuItem categoryConsult;
@@ -444,7 +506,10 @@ public class MainScreen extends javax.swing.JFrame {
     private javax.swing.JMenu menuFinances;
     private javax.swing.JMenu menuProduct;
     private javax.swing.JMenu menuProvider;
+    private javax.swing.JMenuItem menuPurchaseReport;
     private javax.swing.JMenu menuReport;
+    private javax.swing.JMenuItem menuSaleMonthlyHistory;
+    private javax.swing.JMenuItem menuSaleReport;
     private javax.swing.JMenuItem productConsult;
     private javax.swing.JMenuItem productCreate;
     private javax.swing.JMenuItem providerConsult;

@@ -116,7 +116,7 @@
                                   <Group type="102" attributes="0">
                                       <Component id="textCep" min="-2" pref="100" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="btnSearchByCep" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btnSearchByCep" min="-2" pref="30" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="textEmail" min="-2" pref="278" max="-2" attributes="0"/>
                               </Group>
@@ -445,6 +445,9 @@
         <Property name="toolTipText" type="java.lang.String" value="Atualizar Fornecedor"/>
         <Property name="borderPainted" type="boolean" value="false"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUpdateActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnCancel">
       <Properties>
@@ -454,6 +457,9 @@
         <Property name="toolTipText" type="java.lang.String" value="Cancelar Opera&#xe7;&#xe3;o"/>
         <Property name="borderPainted" type="boolean" value="false"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCancelActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="textSocialName">
     </Component>
@@ -475,6 +481,9 @@
         <Property name="toolTipText" type="java.lang.String" value="Busca dados de endere&#xe7;o pelo CEP"/>
         <Property name="borderPainted" type="boolean" value="false"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSearchByCepActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

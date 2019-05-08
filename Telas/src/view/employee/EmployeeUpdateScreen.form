@@ -59,10 +59,14 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="textCep" min="-2" pref="100" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="textCep" min="-2" pref="100" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="btnSearchByCep" min="-2" pref="30" max="-2" attributes="0"/>
+                                  </Group>
                                   <Component id="textCpf" min="-2" pref="120" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace pref="247" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
                                       <Component id="labelComplement" min="-2" max="-2" attributes="0"/>
@@ -207,11 +211,14 @@
                   <Component id="comboState" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="textCep" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="labelCep" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="labelNeighborhood" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="textNeighborhood" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="textCep" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="labelCep" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="labelNeighborhood" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="textNeighborhood" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="btnSearchByCep" min="-2" pref="29" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -255,7 +262,7 @@
                   <Component id="labelStatus2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="checkBoxStatus" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="unrelated" max="32767" attributes="0"/>
+              <EmptySpace type="unrelated" pref="15" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btnUpdate" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                   <Component id="btnCancel" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
@@ -501,6 +508,9 @@
         <Property name="toolTipText" type="java.lang.String" value="Atualizar Funcion&#xe1;rio"/>
         <Property name="borderPainted" type="boolean" value="false"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUpdateActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnCancel">
       <Properties>
@@ -510,6 +520,9 @@
         <Property name="toolTipText" type="java.lang.String" value="Cancelar Opera&#xe7;&#xe3;o"/>
         <Property name="borderPainted" type="boolean" value="false"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCancelActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="labelRole">
       <Properties>
@@ -535,6 +548,18 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Dispon&#xed;vel?"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnSearchByCep">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/resources/images/search-24.png"/>
+        </Property>
+        <Property name="toolTipText" type="java.lang.String" value="Busca dados de endere&#xe7;o pelo CEP"/>
+        <Property name="borderPainted" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSearchByCepActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

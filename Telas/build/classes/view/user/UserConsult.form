@@ -125,6 +125,7 @@
           <Image iconType="3" name="/resources/images/search-24.png"/>
         </Property>
         <Property name="toolTipText" type="java.lang.String" value="Consultar Usu&#xe1;rios"/>
+        <Property name="borderPainted" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSearchActionPerformed"/>
@@ -136,6 +137,7 @@
           <Image iconType="3" name="/resources/images/update-24.png"/>
         </Property>
         <Property name="toolTipText" type="java.lang.String" value="Atualizar Usu&#xe1;rio"/>
+        <Property name="borderPainted" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUpdateActionPerformed"/>
@@ -147,6 +149,7 @@
           <Image iconType="3" name="/resources/images/delete-24.png"/>
         </Property>
         <Property name="toolTipText" type="java.lang.String" value="Apagar Usu&#xe1;rio"/>
+        <Property name="borderPainted" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRemoveActionPerformed"/>
@@ -158,6 +161,7 @@
           <Image iconType="3" name="/resources/images/clean-24.png"/>
         </Property>
         <Property name="toolTipText" type="java.lang.String" value="Limpar Tabela"/>
+        <Property name="borderPainted" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCleanActionPerformed"/>
@@ -169,6 +173,7 @@
           <Image iconType="3" name="/resources/images/cancel-24.png"/>
         </Property>
         <Property name="toolTipText" type="java.lang.String" value="Cancelar Opera&#xe7;&#xe3;o"/>
+        <Property name="borderPainted" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCancelActionPerformed"/>

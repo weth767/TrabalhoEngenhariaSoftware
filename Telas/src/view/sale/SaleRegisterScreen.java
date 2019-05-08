@@ -92,13 +92,28 @@ public class SaleRegisterScreen extends javax.swing.JInternalFrame {
 
         btnConfirmSale.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/finances-24.png"))); // NOI18N
         btnConfirmSale.setToolTipText("Confirmar Venda");
+        btnConfirmSale.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConfirmSaleActionPerformed(evt);
+            }
+        });
 
         btnCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/cancel-24.png"))); // NOI18N
         btnCancel.setToolTipText("Cancelar Operação");
+        btnCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelActionPerformed(evt);
+            }
+        });
 
         btnAddProduct.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/add-24.png"))); // NOI18N
         btnAddProduct.setToolTipText("Adicionar Produto");
         btnAddProduct.setBorderPainted(false);
+        btnAddProduct.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddProductActionPerformed(evt);
+            }
+        });
 
         labelClientName.setText("Nome");
 
@@ -108,11 +123,21 @@ public class SaleRegisterScreen extends javax.swing.JInternalFrame {
         btnSearchClient.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/search-24.png"))); // NOI18N
         btnSearchClient.setToolTipText("Buscar Cliente");
         btnSearchClient.setBorderPainted(false);
+        btnSearchClient.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSearchClientActionPerformed(evt);
+            }
+        });
 
         btnRemoveProduct.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/cancel-24.png"))); // NOI18N
         btnRemoveProduct.setToolTipText("Remover Produto");
         btnRemoveProduct.setBorderPainted(false);
         btnRemoveProduct.setPreferredSize(new java.awt.Dimension(20, 20));
+        btnRemoveProduct.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRemoveProductActionPerformed(evt);
+            }
+        });
 
         labelUser.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         labelUser.setText("Usuário");
@@ -143,6 +168,11 @@ public class SaleRegisterScreen extends javax.swing.JInternalFrame {
         btnSearchProduct.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/search-24.png"))); // NOI18N
         btnSearchProduct.setToolTipText("Buscar Produto");
         btnSearchProduct.setBorderPainted(false);
+        btnSearchProduct.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSearchProductActionPerformed(evt);
+            }
+        });
 
         saleTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -459,6 +489,30 @@ public class SaleRegisterScreen extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnSearchClientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchClientActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSearchClientActionPerformed
+
+    private void btnSearchProductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchProductActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSearchProductActionPerformed
+
+    private void btnAddProductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddProductActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAddProductActionPerformed
+
+    private void btnRemoveProductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoveProductActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnRemoveProductActionPerformed
+
+    private void btnConfirmSaleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmSaleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnConfirmSaleActionPerformed
+
+    private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCancelActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

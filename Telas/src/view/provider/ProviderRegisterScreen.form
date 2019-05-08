@@ -113,7 +113,7 @@
                                   <Group type="102" attributes="0">
                                       <Component id="textCep" min="-2" pref="100" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="btnSearchByCep" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btnSearchByCep" min="-2" pref="30" max="-2" attributes="0"/>
                                       <EmptySpace max="32767" attributes="0"/>
                                       <Component id="labelNeighborhood" min="-2" max="-2" attributes="0"/>
                                   </Group>
@@ -126,7 +126,7 @@
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Group type="102" attributes="0">
                                       <Component id="labelCelphone" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
                                       <Component id="textCellphone" min="-2" pref="120" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="textNeighborhood" min="-2" pref="263" max="-2" attributes="0"/>
@@ -245,10 +245,12 @@
                   <Component id="labelPhone" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnRegister" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
-                  <Component id="btnClean" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="btnCancel" alignment="1" min="-2" pref="31" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="btnRegister" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                      <Component id="btnClean" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
           </Group>
@@ -454,6 +456,9 @@
         <Property name="toolTipText" type="java.lang.String" value="Limpar Campos"/>
         <Property name="borderPainted" type="boolean" value="false"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCleanActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnCancel">
       <Properties>
@@ -463,6 +468,9 @@
         <Property name="toolTipText" type="java.lang.String" value="Cancelar Opera&#xe7;&#xe3;o"/>
         <Property name="borderPainted" type="boolean" value="false"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCancelActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="textSocialName">
     </Component>
@@ -474,6 +482,9 @@
         <Property name="toolTipText" type="java.lang.String" value="Busca dados de endere&#xe7;o pelo CEP"/>
         <Property name="borderPainted" type="boolean" value="false"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSearchByCepActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
