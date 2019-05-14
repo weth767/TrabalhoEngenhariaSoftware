@@ -107,7 +107,7 @@
                               <EmptySpace max="32767" attributes="0"/>
                               <Component id="labelNumber" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jFormattedTextField1" min="-2" pref="90" max="-2" attributes="0"/>
+                              <Component id="textNumber" min="-2" pref="90" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -117,8 +117,8 @@
                       <Component id="textWork" min="-2" pref="259" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="labelSalary" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="textSalary" min="-2" pref="110" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                      <Component id="textSalary" min="-2" pref="114" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="labelName" min="-2" max="-2" attributes="0"/>
@@ -231,7 +231,7 @@
                   <Component id="textStreet" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="labelStreet" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="labelNumber" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jFormattedTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="textNumber" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -299,10 +299,10 @@
         <Property name="text" type="java.lang.String" value="Complemento"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField1">
+    <Component class="javax.swing.JFormattedTextField" name="textNumber">
       <Properties>
         <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
-          <Format format="######" subtype="-1" type="0"/>
+          <Format format="" subtype="-1" type="0"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="toolTipText" type="java.lang.String" value="N&#xfa;mero da resid&#xea;ncia do cliente"/>
@@ -310,6 +310,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="textComplement">
       <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="toolTipText" type="java.lang.String" value="Complemento"/>
       </Properties>
     </Component>
@@ -509,6 +510,9 @@
         <Property name="selectedIndex" type="int" value="12"/>
         <Property name="toolTipText" type="java.lang.String" value="Estado onde se localiza a resid&#xea;ncia do cliente"/>
       </Properties>
+      <Events>
+        <EventHandler event="popupMenuWillBecomeInvisible" listener="javax.swing.event.PopupMenuListener" parameters="javax.swing.event.PopupMenuEvent" handler="comboStatePopupMenuWillBecomeInvisible"/>
+      </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
@@ -532,15 +536,6 @@
     </Component>
     <Component class="javax.swing.JTextField" name="textStreet">
     </Component>
-    <Component class="javax.swing.JFormattedTextField" name="textSalary">
-      <Properties>
-        <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
-          <Format format="R$ #.###,##" subtype="-1" type="5"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value=""/>
-        <Property name="toolTipText" type="java.lang.String" value="Sal&#xe1;rio do cliente(se houver)"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JLabel" name="labelReference">
       <Properties>
         <Property name="text" type="java.lang.String" value="Refer&#xea;ncia"/>
@@ -561,6 +556,9 @@
         <Property name="text" type="java.lang.String" value="Dispon&#xed;vel?"/>
         <Property name="toolTipText" type="java.lang.String" value="Disponibilidade do cliente no sistema"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="checkBoxStatus2ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnSearchByCep2">
       <Properties>
@@ -572,6 +570,11 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSearchByCep2ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="textSalary">
+      <Events>
+        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="textSalaryFocusLost"/>
       </Events>
     </Component>
   </SubComponents>

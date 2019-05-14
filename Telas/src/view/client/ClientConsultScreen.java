@@ -173,7 +173,7 @@ public class ClientConsultScreen extends javax.swing.JInternalFrame {
             }
         });
 
-        comboSearch.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ID", "Nome", "CPF", "RG", "Data de Cadastro", "Sexo", "Data de Nascimento", "E-mail", "Telefone", "Celular", "CEP", "Estado", "Cidade", "Bairro", "Rua", "Local de Trabalho", "Salário", "Status" }));
+        comboSearch.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sem Filtragem", "ID", "Nome", "CPF", "Status", " " }));
         comboSearch.setToolTipText("Filtro de busca de clientes");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

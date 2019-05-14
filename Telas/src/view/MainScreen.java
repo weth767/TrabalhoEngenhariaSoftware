@@ -97,7 +97,7 @@ public class MainScreen extends javax.swing.JFrame {
         menuClient.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/client-24.png"))); // NOI18N
         menuClient.setText("Cliente");
 
-        clientCreate.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_MASK));
+        clientCreate.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
         clientCreate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/add-24.png"))); // NOI18N
         clientCreate.setText("Cadastrar");
         clientCreate.addActionListener(new java.awt.event.ActionListener() {
@@ -107,7 +107,7 @@ public class MainScreen extends javax.swing.JFrame {
         });
         menuClient.add(clientCreate);
 
-        clientConsult.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.SHIFT_MASK));
+        clientConsult.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.SHIFT_MASK));
         clientConsult.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/search-24.png"))); // NOI18N
         clientConsult.setText("Consultar");
         clientConsult.addActionListener(new java.awt.event.ActionListener() {
@@ -122,7 +122,7 @@ public class MainScreen extends javax.swing.JFrame {
         menuProvider.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/provider-24.png"))); // NOI18N
         menuProvider.setText("Fornecedor");
 
-        providerCreate.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, java.awt.event.InputEvent.CTRL_MASK));
+        providerCreate.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
         providerCreate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/add-24.png"))); // NOI18N
         providerCreate.setText("Cadastrar");
         providerCreate.addActionListener(new java.awt.event.ActionListener() {
@@ -132,7 +132,7 @@ public class MainScreen extends javax.swing.JFrame {
         });
         menuProvider.add(providerCreate);
 
-        providerConsult.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, java.awt.event.InputEvent.SHIFT_MASK));
+        providerConsult.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.SHIFT_MASK));
         providerConsult.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/search-24.png"))); // NOI18N
         providerConsult.setText("Consultar");
         providerConsult.addActionListener(new java.awt.event.ActionListener() {
@@ -147,7 +147,7 @@ public class MainScreen extends javax.swing.JFrame {
         menuEmployee.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/employee-24.png"))); // NOI18N
         menuEmployee.setText("Funcionário");
 
-        employeeCreate.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, java.awt.event.InputEvent.CTRL_MASK));
+        employeeCreate.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
         employeeCreate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/add-24.png"))); // NOI18N
         employeeCreate.setText("Cadastrar");
         employeeCreate.addActionListener(new java.awt.event.ActionListener() {
@@ -157,7 +157,7 @@ public class MainScreen extends javax.swing.JFrame {
         });
         menuEmployee.add(employeeCreate);
 
-        employeeConsult.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, java.awt.event.InputEvent.SHIFT_MASK));
+        employeeConsult.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.SHIFT_MASK));
         employeeConsult.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/search-24.png"))); // NOI18N
         employeeConsult.setText("Consultar");
         employeeConsult.addActionListener(new java.awt.event.ActionListener() {
@@ -172,7 +172,7 @@ public class MainScreen extends javax.swing.JFrame {
         menuProduct.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/product-24.png"))); // NOI18N
         menuProduct.setText("Produto");
 
-        productCreate.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.CTRL_MASK));
+        productCreate.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
         productCreate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/add-24.png"))); // NOI18N
         productCreate.setText("Cadastrar");
         productCreate.addActionListener(new java.awt.event.ActionListener() {
@@ -182,7 +182,7 @@ public class MainScreen extends javax.swing.JFrame {
         });
         menuProduct.add(productCreate);
 
-        productConsult.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.SHIFT_MASK));
+        productConsult.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.SHIFT_MASK));
         productConsult.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/search-24.png"))); // NOI18N
         productConsult.setText("Consultar");
         productConsult.addActionListener(new java.awt.event.ActionListener() {
@@ -197,7 +197,7 @@ public class MainScreen extends javax.swing.JFrame {
         menuBrand.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/brand-24.png"))); // NOI18N
         menuBrand.setText("Marca");
 
-        brandCreate.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.CTRL_MASK));
+        brandCreate.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
         brandCreate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/add-24.png"))); // NOI18N
         brandCreate.setText("Cadastrar");
         brandCreate.addActionListener(new java.awt.event.ActionListener() {
@@ -207,7 +207,7 @@ public class MainScreen extends javax.swing.JFrame {
         });
         menuBrand.add(brandCreate);
 
-        brandConsult.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.SHIFT_MASK));
+        brandConsult.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.SHIFT_MASK));
         brandConsult.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/search-24.png"))); // NOI18N
         brandConsult.setText("Consultar");
         brandConsult.addActionListener(new java.awt.event.ActionListener() {
@@ -222,7 +222,7 @@ public class MainScreen extends javax.swing.JFrame {
         menuCategory.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/category-24.png"))); // NOI18N
         menuCategory.setText("Categoria");
 
-        categoryCreate.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_G, java.awt.event.InputEvent.CTRL_MASK));
+        categoryCreate.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_G, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
         categoryCreate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/add-24.png"))); // NOI18N
         categoryCreate.setText("Cadastrar");
         categoryCreate.addActionListener(new java.awt.event.ActionListener() {
@@ -232,7 +232,7 @@ public class MainScreen extends javax.swing.JFrame {
         });
         menuCategory.add(categoryCreate);
 
-        categoryConsult.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_G, java.awt.event.InputEvent.SHIFT_MASK));
+        categoryConsult.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_G, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.SHIFT_MASK));
         categoryConsult.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/search-24.png"))); // NOI18N
         categoryConsult.setText("Consultar");
         categoryConsult.addActionListener(new java.awt.event.ActionListener() {
@@ -247,7 +247,7 @@ public class MainScreen extends javax.swing.JFrame {
         menuFinances.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/finances-24.png"))); // NOI18N
         menuFinances.setText("Financeiro");
 
-        financesRegisterSale.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, java.awt.event.InputEvent.CTRL_MASK));
+        financesRegisterSale.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
         financesRegisterSale.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/sale-24.png"))); // NOI18N
         financesRegisterSale.setText("Venda");
         financesRegisterSale.setToolTipText("");
@@ -258,7 +258,7 @@ public class MainScreen extends javax.swing.JFrame {
         });
         menuFinances.add(financesRegisterSale);
 
-        financesConsultSales.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, java.awt.event.InputEvent.SHIFT_MASK));
+        financesConsultSales.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.SHIFT_MASK));
         financesConsultSales.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/search-24.png"))); // NOI18N
         financesConsultSales.setText("Consultar Vendas");
         financesConsultSales.addActionListener(new java.awt.event.ActionListener() {
@@ -269,7 +269,7 @@ public class MainScreen extends javax.swing.JFrame {
         menuFinances.add(financesConsultSales);
         menuFinances.add(jSeparator1);
 
-        financesRegisterPurchase.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_MASK));
+        financesRegisterPurchase.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
         financesRegisterPurchase.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/purchase-24.png"))); // NOI18N
         financesRegisterPurchase.setText("Compra");
         financesRegisterPurchase.addActionListener(new java.awt.event.ActionListener() {
@@ -279,7 +279,7 @@ public class MainScreen extends javax.swing.JFrame {
         });
         menuFinances.add(financesRegisterPurchase);
 
-        financesConsultPurchases.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.SHIFT_MASK));
+        financesConsultPurchases.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.SHIFT_MASK));
         financesConsultPurchases.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/search-24.png"))); // NOI18N
         financesConsultPurchases.setText("Consultar Compras");
         financesConsultPurchases.addActionListener(new java.awt.event.ActionListener() {
@@ -290,7 +290,7 @@ public class MainScreen extends javax.swing.JFrame {
         menuFinances.add(financesConsultPurchases);
         menuFinances.add(jSeparator2);
 
-        financesPaymentRegister.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_MASK));
+        financesPaymentRegister.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
         financesPaymentRegister.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/payment-24.png"))); // NOI18N
         financesPaymentRegister.setText("Pagamento");
         financesPaymentRegister.addActionListener(new java.awt.event.ActionListener() {
@@ -300,7 +300,7 @@ public class MainScreen extends javax.swing.JFrame {
         });
         menuFinances.add(financesPaymentRegister);
 
-        financesPaymentConsult.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.SHIFT_MASK));
+        financesPaymentConsult.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.SHIFT_MASK));
         financesPaymentConsult.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/search-24.png"))); // NOI18N
         financesPaymentConsult.setText("Consultar Pagamentos");
         financesPaymentConsult.addActionListener(new java.awt.event.ActionListener() {
@@ -311,7 +311,7 @@ public class MainScreen extends javax.swing.JFrame {
         menuFinances.add(financesPaymentConsult);
         menuFinances.add(jSeparator4);
 
-        financesReceiveRegister.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.CTRL_MASK));
+        financesReceiveRegister.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
         financesReceiveRegister.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/receive-24.png"))); // NOI18N
         financesReceiveRegister.setText("Recebimento");
         financesReceiveRegister.addActionListener(new java.awt.event.ActionListener() {
@@ -321,7 +321,7 @@ public class MainScreen extends javax.swing.JFrame {
         });
         menuFinances.add(financesReceiveRegister);
 
-        financesReceiveConsult.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.SHIFT_MASK));
+        financesReceiveConsult.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.SHIFT_MASK));
         financesReceiveConsult.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/search-24.png"))); // NOI18N
         financesReceiveConsult.setText("Consultar Recebimentos");
         financesReceiveConsult.addActionListener(new java.awt.event.ActionListener() {
@@ -332,7 +332,7 @@ public class MainScreen extends javax.swing.JFrame {
         menuFinances.add(financesReceiveConsult);
         menuFinances.add(jSeparator3);
 
-        financesCashier.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.SHIFT_MASK));
+        financesCashier.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.SHIFT_MASK));
         financesCashier.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/cashier-24.png"))); // NOI18N
         financesCashier.setText("Caixa");
         financesCashier.addActionListener(new java.awt.event.ActionListener() {
@@ -347,7 +347,7 @@ public class MainScreen extends javax.swing.JFrame {
         menuReport.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/report-24.png"))); // NOI18N
         menuReport.setText("Relatórios");
 
-        menuSaleReport.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_1, java.awt.event.InputEvent.CTRL_MASK));
+        menuSaleReport.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_1, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
         menuSaleReport.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/sale-24.png"))); // NOI18N
         menuSaleReport.setText("Relatório de Vendas");
         menuSaleReport.addActionListener(new java.awt.event.ActionListener() {
@@ -357,7 +357,7 @@ public class MainScreen extends javax.swing.JFrame {
         });
         menuReport.add(menuSaleReport);
 
-        menuPurchaseReport.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_2, java.awt.event.InputEvent.CTRL_MASK));
+        menuPurchaseReport.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_2, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
         menuPurchaseReport.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/purchase-24.png"))); // NOI18N
         menuPurchaseReport.setText("Relatório de Compras");
         menuPurchaseReport.addActionListener(new java.awt.event.ActionListener() {
@@ -367,7 +367,7 @@ public class MainScreen extends javax.swing.JFrame {
         });
         menuReport.add(menuPurchaseReport);
 
-        menuSaleMonthlyHistory.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_3, java.awt.event.InputEvent.CTRL_MASK));
+        menuSaleMonthlyHistory.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_3, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
         menuSaleMonthlyHistory.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/report-24.png"))); // NOI18N
         menuSaleMonthlyHistory.setText("Relatório de Ficha Mensal");
         menuSaleMonthlyHistory.addActionListener(new java.awt.event.ActionListener() {
@@ -377,7 +377,7 @@ public class MainScreen extends javax.swing.JFrame {
         });
         menuReport.add(menuSaleMonthlyHistory);
 
-        amountProductReport.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_4, java.awt.event.InputEvent.CTRL_MASK));
+        amountProductReport.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_4, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
         amountProductReport.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/product-24.png"))); // NOI18N
         amountProductReport.setText("Relatório de Estoque de Produtos");
         amountProductReport.addActionListener(new java.awt.event.ActionListener() {

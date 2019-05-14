@@ -39,7 +39,7 @@ public class ClientUpdateScreen extends javax.swing.JInternalFrame {
         textReference = new javax.swing.JTextField();
         btnUpdate = new javax.swing.JButton();
         labelComplement = new javax.swing.JLabel();
-        jFormattedTextField1 = new javax.swing.JFormattedTextField();
+        textNumber = new javax.swing.JFormattedTextField();
         textComplement = new javax.swing.JTextField();
         btnCancel = new javax.swing.JButton();
         labelEmail = new javax.swing.JLabel();
@@ -71,12 +71,12 @@ public class ClientUpdateScreen extends javax.swing.JInternalFrame {
         labelStreet = new javax.swing.JLabel();
         labelSalary = new javax.swing.JLabel();
         textStreet = new javax.swing.JTextField();
-        textSalary = new javax.swing.JFormattedTextField();
         labelReference = new javax.swing.JLabel();
         labelNumber = new javax.swing.JLabel();
         labelStatus2 = new javax.swing.JLabel();
         checkBoxStatus2 = new javax.swing.JCheckBox();
         btnSearchByCep2 = new javax.swing.JButton();
+        textSalary = new javax.swing.JTextField();
 
         labelStatus.setText("Status");
 
@@ -121,10 +121,11 @@ public class ClientUpdateScreen extends javax.swing.JInternalFrame {
 
         labelComplement.setText("Complemento");
 
-        jFormattedTextField1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("######"))));
-        jFormattedTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jFormattedTextField1.setToolTipText("Número da residência do cliente");
+        textNumber.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat(""))));
+        textNumber.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        textNumber.setToolTipText("Número da residência do cliente");
 
+        textComplement.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         textComplement.setToolTipText("Complemento");
 
         btnCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/cancel-24.png"))); // NOI18N
@@ -213,20 +214,21 @@ public class ClientUpdateScreen extends javax.swing.JInternalFrame {
         comboState.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Distrito Federal", "Espírito Santo", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí", "Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", "Rondônia", "Roraima", "Santa Catarina", "São Paulo", "Sergipe", "Tocantins" }));
         comboState.setSelectedIndex(12);
         comboState.setToolTipText("Estado onde se localiza a residência do cliente");
+        comboState.addPopupMenuListener(new javax.swing.event.PopupMenuListener() {
+            public void popupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt) {
+            }
+            public void popupMenuWillBecomeInvisible(javax.swing.event.PopupMenuEvent evt) {
+                comboStatePopupMenuWillBecomeInvisible(evt);
+            }
+            public void popupMenuCanceled(javax.swing.event.PopupMenuEvent evt) {
+            }
+        });
 
         textWork.setToolTipText("Local de trabalho do cliente(se houver)");
 
         labelStreet.setText("Rua");
 
         labelSalary.setText("Salário");
-
-        try {
-            textSalary.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("R$ #.###,##")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
-        textSalary.setText("");
-        textSalary.setToolTipText("Salário do cliente(se houver)");
 
         labelReference.setText("Referência");
 
@@ -236,6 +238,11 @@ public class ClientUpdateScreen extends javax.swing.JInternalFrame {
 
         checkBoxStatus2.setText("Disponível?");
         checkBoxStatus2.setToolTipText("Disponibilidade do cliente no sistema");
+        checkBoxStatus2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkBoxStatus2ActionPerformed(evt);
+            }
+        });
 
         btnSearchByCep2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/search-24.png"))); // NOI18N
         btnSearchByCep2.setToolTipText("Busca dados de endereço pelo CEP");
@@ -243,6 +250,12 @@ public class ClientUpdateScreen extends javax.swing.JInternalFrame {
         btnSearchByCep2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSearchByCep2ActionPerformed(evt);
+            }
+        });
+
+        textSalary.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                textSalaryFocusLost(evt);
             }
         });
 
@@ -296,15 +309,15 @@ public class ClientUpdateScreen extends javax.swing.JInternalFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(labelNumber)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(textNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(labelWork)
                         .addGap(27, 27, 27)
                         .addComponent(textWork, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(labelSalary)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(textSalary, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(8, 8, 8)
+                        .addComponent(textSalary, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(labelName)
                         .addGap(0, 0, Short.MAX_VALUE))
@@ -389,7 +402,7 @@ public class ClientUpdateScreen extends javax.swing.JInternalFrame {
                     .addComponent(textStreet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelStreet)
                     .addComponent(labelNumber)
-                    .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelReference)
@@ -444,6 +457,18 @@ public class ClientUpdateScreen extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnSearchByCep2ActionPerformed
 
+    private void textSalaryFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_textSalaryFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textSalaryFocusLost
+
+    private void comboStatePopupMenuWillBecomeInvisible(javax.swing.event.PopupMenuEvent evt) {//GEN-FIRST:event_comboStatePopupMenuWillBecomeInvisible
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboStatePopupMenuWillBecomeInvisible
+
+    private void checkBoxStatus2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxStatus2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_checkBoxStatus2ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancel;
@@ -455,7 +480,6 @@ public class ClientUpdateScreen extends javax.swing.JInternalFrame {
     private javax.swing.JComboBox<String> comboCity;
     private javax.swing.JComboBox<String> comboGender;
     private javax.swing.JComboBox<String> comboState;
-    private javax.swing.JFormattedTextField jFormattedTextField1;
     private javax.swing.JLabel labelBirthday;
     private javax.swing.JLabel labelCelphone;
     private javax.swing.JLabel labelCep;
@@ -485,10 +509,11 @@ public class ClientUpdateScreen extends javax.swing.JInternalFrame {
     private javax.swing.JTextField textEmail;
     private javax.swing.JTextField textName;
     private javax.swing.JTextField textNeighborhood;
+    private javax.swing.JFormattedTextField textNumber;
     private javax.swing.JFormattedTextField textPhone;
     private javax.swing.JTextField textReference;
     private javax.swing.JTextField textRg;
-    private javax.swing.JFormattedTextField textSalary;
+    private javax.swing.JTextField textSalary;
     private javax.swing.JTextField textStreet;
     private javax.swing.JTextField textWork;
     // End of variables declaration//GEN-END:variables

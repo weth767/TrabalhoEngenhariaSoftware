@@ -46,7 +46,7 @@ public class ClientRegisterScreen extends javax.swing.JInternalFrame {
         labelStreet = new javax.swing.JLabel();
         textStreet = new javax.swing.JTextField();
         labelNumber = new javax.swing.JLabel();
-        jFormattedTextField1 = new javax.swing.JFormattedTextField();
+        textNumber = new javax.swing.JFormattedTextField();
         labelCep = new javax.swing.JLabel();
         textCep = new javax.swing.JFormattedTextField();
         labelNeighborhood = new javax.swing.JLabel();
@@ -58,19 +58,19 @@ public class ClientRegisterScreen extends javax.swing.JInternalFrame {
         labelEmail = new javax.swing.JLabel();
         textEmail = new javax.swing.JTextField();
         labelBirthday = new javax.swing.JLabel();
-        jFormattedTextField2 = new javax.swing.JFormattedTextField();
+        textBirthday = new javax.swing.JFormattedTextField();
         labelPhone = new javax.swing.JLabel();
         textPhone = new javax.swing.JFormattedTextField();
         labelCelphone = new javax.swing.JLabel();
-        textCelphone = new javax.swing.JFormattedTextField();
+        textCellphone = new javax.swing.JFormattedTextField();
         labelWork = new javax.swing.JLabel();
         textWork = new javax.swing.JTextField();
         labelSalary = new javax.swing.JLabel();
-        textSalary = new javax.swing.JFormattedTextField();
         btnRegister = new javax.swing.JButton();
         btnClean = new javax.swing.JButton();
         btnCancel = new javax.swing.JButton();
         btnSearchByCep2 = new javax.swing.JButton();
+        textSalary = new javax.swing.JTextField();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -121,14 +121,22 @@ public class ClientRegisterScreen extends javax.swing.JInternalFrame {
         comboState.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Distrito Federal", "Espírito Santo", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí", "Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", "Rondônia", "Roraima", "Santa Catarina", "São Paulo", "Sergipe", "Tocantins" }));
         comboState.setSelectedIndex(12);
         comboState.setToolTipText("Estado onde se localiza a moradia do cliente");
+        comboState.addPopupMenuListener(new javax.swing.event.PopupMenuListener() {
+            public void popupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt) {
+            }
+            public void popupMenuWillBecomeInvisible(javax.swing.event.PopupMenuEvent evt) {
+                comboStatePopupMenuWillBecomeInvisible(evt);
+            }
+            public void popupMenuCanceled(javax.swing.event.PopupMenuEvent evt) {
+            }
+        });
 
         labelStreet.setText("Rua");
 
         labelNumber.setText("Número");
 
-        jFormattedTextField1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("######"))));
-        jFormattedTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jFormattedTextField1.setToolTipText("Número da casa do cliente");
+        textNumber.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat(""))));
+        textNumber.setToolTipText("Número da casa do cliente");
 
         labelCep.setText("CEP");
 
@@ -159,12 +167,12 @@ public class ClientRegisterScreen extends javax.swing.JInternalFrame {
         labelBirthday.setText("Data Nascimeto");
 
         try {
-            jFormattedTextField2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+            textBirthday.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        jFormattedTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jFormattedTextField2.setToolTipText("Data de nascimento do cliente");
+        textBirthday.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        textBirthday.setToolTipText("Data de nascimento do cliente");
 
         labelPhone.setText("Telefone");
 
@@ -179,25 +187,17 @@ public class ClientRegisterScreen extends javax.swing.JInternalFrame {
         labelCelphone.setText("Celular");
 
         try {
-            textCelphone.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##) # ####-####")));
+            textCellphone.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##) # ####-####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        textCelphone.setToolTipText("Celular do cliente");
+        textCellphone.setToolTipText("Celular do cliente");
 
         labelWork.setText("Trabalho");
 
         textWork.setToolTipText("Local de trabalho do cliente(se houver)");
 
         labelSalary.setText("Salário");
-
-        try {
-            textSalary.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("R$ #.###,##")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
-        textSalary.setText("");
-        textSalary.setToolTipText("Salário do cliente(se houver)");
 
         btnRegister.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/add-24.png"))); // NOI18N
         btnRegister.setToolTipText("Cadastrar Cliente");
@@ -235,6 +235,12 @@ public class ClientRegisterScreen extends javax.swing.JInternalFrame {
             }
         });
 
+        textSalary.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                textSalaryFocusLost(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -255,7 +261,7 @@ public class ClientRegisterScreen extends javax.swing.JInternalFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(labelNumber)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(textNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(comboCity, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 135, Short.MAX_VALUE)
@@ -295,7 +301,7 @@ public class ClientRegisterScreen extends javax.swing.JInternalFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(labelSalary)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(textSalary, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(textSalary, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(labelName)
                         .addGap(0, 0, Short.MAX_VALUE))
@@ -319,7 +325,7 @@ public class ClientRegisterScreen extends javax.swing.JInternalFrame {
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                         .addComponent(labelBirthday, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jFormattedTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addComponent(textBirthday, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
@@ -334,7 +340,7 @@ public class ClientRegisterScreen extends javax.swing.JInternalFrame {
                                         .addGap(18, 18, 18)
                                         .addComponent(btnCancel)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(textCelphone, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(textCellphone, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -380,7 +386,7 @@ public class ClientRegisterScreen extends javax.swing.JInternalFrame {
                     .addComponent(textStreet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelStreet)
                     .addComponent(labelNumber)
-                    .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelReference)
@@ -392,13 +398,13 @@ public class ClientRegisterScreen extends javax.swing.JInternalFrame {
                     .addComponent(labelEmail)
                     .addComponent(textEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelBirthday)
-                    .addComponent(jFormattedTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textBirthday, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(textPhone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelPhone)
                     .addComponent(labelCelphone)
-                    .addComponent(textCelphone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textCellphone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(textWork, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -411,7 +417,7 @@ public class ClientRegisterScreen extends javax.swing.JInternalFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(btnRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(btnClean, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
         pack();
@@ -433,19 +439,23 @@ public class ClientRegisterScreen extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnSearchByCep2ActionPerformed
 
+    private void comboStatePopupMenuWillBecomeInvisible(javax.swing.event.PopupMenuEvent evt) {//GEN-FIRST:event_comboStatePopupMenuWillBecomeInvisible
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboStatePopupMenuWillBecomeInvisible
+
+    private void textSalaryFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_textSalaryFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textSalaryFocusLost
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancel;
     private javax.swing.JButton btnClean;
     private javax.swing.JButton btnRegister;
-    private javax.swing.JButton btnSearchByCep;
-    private javax.swing.JButton btnSearchByCep1;
     private javax.swing.JButton btnSearchByCep2;
     private javax.swing.JComboBox<String> comboCity;
     private javax.swing.JComboBox<String> comboGender;
     private javax.swing.JComboBox<String> comboState;
-    private javax.swing.JFormattedTextField jFormattedTextField1;
-    private javax.swing.JFormattedTextField jFormattedTextField2;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel labelBirthday;
@@ -466,17 +476,19 @@ public class ClientRegisterScreen extends javax.swing.JInternalFrame {
     private javax.swing.JLabel labelState;
     private javax.swing.JLabel labelStreet;
     private javax.swing.JLabel labelWork;
-    private javax.swing.JFormattedTextField textCelphone;
+    private javax.swing.JFormattedTextField textBirthday;
+    private javax.swing.JFormattedTextField textCellphone;
     private javax.swing.JFormattedTextField textCep;
     private javax.swing.JTextField textComplement;
     private javax.swing.JFormattedTextField textCpf;
     private javax.swing.JTextField textEmail;
     private javax.swing.JTextField textName;
     private javax.swing.JTextField textNeighborhood;
+    private javax.swing.JFormattedTextField textNumber;
     private javax.swing.JFormattedTextField textPhone;
     private javax.swing.JTextField textReference;
     private javax.swing.JTextField textRg;
-    private javax.swing.JFormattedTextField textSalary;
+    private javax.swing.JTextField textSalary;
     private javax.swing.JTextField textStreet;
     private javax.swing.JTextField textWork;
     // End of variables declaration//GEN-END:variables

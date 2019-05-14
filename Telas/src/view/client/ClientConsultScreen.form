@@ -314,25 +314,13 @@
     <Component class="javax.swing.JComboBox" name="comboSearch">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="18">
-            <StringItem index="0" value="ID"/>
-            <StringItem index="1" value="Nome"/>
-            <StringItem index="2" value="CPF"/>
-            <StringItem index="3" value="RG"/>
-            <StringItem index="4" value="Data de Cadastro"/>
-            <StringItem index="5" value="Sexo"/>
-            <StringItem index="6" value="Data de Nascimento"/>
-            <StringItem index="7" value="E-mail"/>
-            <StringItem index="8" value="Telefone"/>
-            <StringItem index="9" value="Celular"/>
-            <StringItem index="10" value="CEP"/>
-            <StringItem index="11" value="Estado"/>
-            <StringItem index="12" value="Cidade"/>
-            <StringItem index="13" value="Bairro"/>
-            <StringItem index="14" value="Rua"/>
-            <StringItem index="15" value="Local de Trabalho"/>
-            <StringItem index="16" value="Sal&#xe1;rio"/>
-            <StringItem index="17" value="Status"/>
+          <StringArray count="6">
+            <StringItem index="0" value="Sem Filtragem"/>
+            <StringItem index="1" value="ID"/>
+            <StringItem index="2" value="Nome"/>
+            <StringItem index="3" value="CPF"/>
+            <StringItem index="4" value="Status"/>
+            <StringItem index="5" value=" "/>
           </StringArray>
         </Property>
         <Property name="toolTipText" type="java.lang.String" value="Filtro de busca de clientes"/>
